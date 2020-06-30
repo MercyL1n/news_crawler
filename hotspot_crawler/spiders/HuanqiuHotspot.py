@@ -14,7 +14,7 @@ class HuanqiuHotspotSpider(CrawlSpider):
         Rule(LinkExtractor(allow=r"https?://[^\s]*\.huanqiu\.com/\S+/[^\s]*\.html",
                            restrict_xpaths=['//a[not(contains(@href,"agt=8"))]', '//a[not(@rel) or not(@class)]'],
                            deny=(r"http://\S+\.\S+\.com/\S+\?agt=8", r"/pic/", r"/photo/")),
-             callback='parse_item_huanqiu', follow=False),
+             callback='parse_item_huanqiu', follow=True),
     )
 
     def parse_item_huanqiu(self, response):

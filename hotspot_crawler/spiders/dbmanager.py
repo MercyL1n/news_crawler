@@ -7,7 +7,7 @@ class MysqlOperation():
         # 1. 建立数据库的连接
         self.connect = pymysql.connect(
             # localhost连接的是本地数据库
-            host='localhost',
+            host='120.26.184.50',
             # mysql数据库的端口号
             port=3306,
             # 数据库的用户名
@@ -29,6 +29,16 @@ class MysqlOperation():
             self.cursor.execute(insert_sql)
             # 4. 提交操作
             self.connect.commit()
+        except:
+            # 输出异常信息
+            traceback.print_exc()
+
+    def get_website_list(self):
+        try:
+            get_list_sql = "SELECT * FROM `websites`"
+            self.cursor.execute(get_list_sql)
+            results = self.cursor.fetchall()
+            return results
         except:
             # 输出异常信息
             traceback.print_exc()

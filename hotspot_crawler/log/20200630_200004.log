@@ -1,0 +1,53 @@
+2020-06-30 20:00:05 [scrapy.utils.log] INFO: Scrapy 2.1.0 started (bot: hotspot_crawler)
+2020-06-30 20:00:05 [scrapy.utils.log] INFO: Versions: lxml 4.5.1.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 | packaged by conda-forge | (default, Mar 23 2020, 22:22:21) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 2.8, Platform Windows-10-10.0.18362-SP0
+2020-06-30 20:00:05 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2020-06-30 20:00:05 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'hotspot_crawler',
+ 'CONCURRENT_REQUESTS': 32,
+ 'COOKIES_ENABLED': False,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': './hotspot_crawler/log/20200630_200004.log',
+ 'NEWSPIDER_MODULE': 'hotspot_crawler.spiders',
+ 'SPIDER_MODULES': ['hotspot_crawler.spiders.TencentHotspot',
+                    'hotspot_crawler.spiders.SohuHotspot',
+                    'hotspot_crawler.spiders.XinhuaHotspot',
+                    'hotspot_crawler.spiders.HuanqiuHotspot',
+                    'hotspot_crawler.spiders.BaiduHotspot',
+                    'hotspot_crawler.spiders.FengHuangHotspot',
+                    'hotspot_crawler.spiders.SinaHotspot']}
+2020-06-30 20:00:05 [scrapy.extensions.telnet] INFO: Telnet Password: f107a9a3b1955370
+2020-06-30 20:00:05 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2020-06-30 20:00:05 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'hotspot_crawler.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-30 20:00:05 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-30 20:00:05 [scrapy.middleware] INFO: Enabled item pipelines:
+['hotspot_crawler.pipelines.JSONWithEncodingPipeline']
+2020-06-30 20:00:05 [scrapy.core.engine] INFO: Spider opened
+2020-06-30 20:00:05 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-30 20:00:05 [BaiduHotspot] INFO: Spider opened: BaiduHotspot
+2020-06-30 20:00:05 [BaiduHotspot] INFO: Spider opened: BaiduHotspot
+2020-06-30 20:00:05 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-06-30 20:00:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://news.baidu.com/> (referer: None)
+2020-06-30 20:00:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://baijiahao.baidu.com/s?id=1670914908167595360> (referer: http://news.baidu.com/)

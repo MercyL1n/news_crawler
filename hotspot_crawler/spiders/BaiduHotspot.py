@@ -9,29 +9,16 @@ from ..items import HotspotCrawlerItem, HotspotCrawlerItemLoader
 
 class BaiduHotspotSpider(CrawlSpider):
     name = 'BaiduHotspot'
-    allowed_domains = ['baidu.com', ]
+    allowed_domains = ['baijiahao.baidu.com', 'mbd.baidu.com']
     start_urls = ['http://news.baidu.com/', ]
 
     rules = (
-        Rule(LinkExtractor(allow=r"http://baijiahao.baidu.com/s\?id=\w+",
-                           restrict_xpaths=['//div[@id="pane-news"]//a[@href]',
-                                            '//div[@id="civilnews"]//a[@href]',
-                                            '//div[@id="InternationalNews"]//a[@href]',
-                                            '//div[@id="EnterNews"]//a[@href]',
-                                            '//div[@id="SportNews"]//a[@href]',
-                                            '//div[@id="FinanceNews"]//a[@href]',
-                                            '//div[@id="TechNews"]//a[@href]',
-                                            '//div[@id="MilitaryNews"]//a[@href]',
-                                            '//div[@id="InternetNews"]//a[@href]',
-                                            '//div[@id="DiscoveryNews"]//a[@href]',
-                                            '//div[@id="LadyNews"]//a[@href]',
-                                            '//div[@id="HealthNews"]//a[@href]', ]), callback='parse_item_baidu',
-             follow=True),
+        Rule(LinkExtractor(allow_domains=allowed_domains), callback='parse_item_baidu', follow=True),
     )
 
     def parse_item_baidu(self, response):
         print("parsing url %s" % response.url)
-        assert re.match(r"http://baijiahao.baidu.com/s\?id=\w+", string=response.url) is not None
+        # assert re.match(r"http://baijiahao.baidu.com/s\?id=\w+", string=response.url) is not None
         # url示例：http://baijiahao.baidu.com/s?id=1638368912732698067
         item_loader = HotspotCrawlerItemLoader(item=HotspotCrawlerItem(), response=response)
         try:
@@ -46,7 +33,7 @@ class BaiduHotspotSpider(CrawlSpider):
             today = datetime.datetime.now()
             time_str[0] = re.sub(r"发布时间[：:]", repl="", string=time_str[0])
             time_str[0] = str(today.year) + '-' + time_str[0]
-            item_loader.add_value("publish_time", " ".join(time_str))
+            item_loader.add_value("publish_time", time_str[0]+" "+time_str[1]+":00")
             # item_loader.add_value("keywords", [])
             # item_loader.add_value("content_url", response.url)
             # media_url = {}
@@ -60,8 +47,8 @@ class BaiduHotspotSpider(CrawlSpider):
             # item_loader.add_value("media_url", media_url)
             # 要拿到所有p标签下的文字，用add_value
             content_list = response.css('div.article-content > p::text').extract()
-            if content_list is []:
-                content_list = response.css('div.article-content>p>span::text').extract()
+            if not content_list:
+                content_list = response.css('div.article-content > p > span::text').extract()
             content = '\n'.join(content_list)
             content = self.replace_spaces_and_comments(content)
             item_loader.add_value("content", content)

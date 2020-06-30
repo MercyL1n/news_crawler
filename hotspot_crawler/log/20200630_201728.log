@@ -1,0 +1,415 @@
+2020-06-30 20:17:28 [scrapy.utils.log] INFO: Scrapy 2.1.0 started (bot: hotspot_crawler)
+2020-06-30 20:17:28 [scrapy.utils.log] INFO: Versions: lxml 4.5.1.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 | packaged by conda-forge | (default, Mar 23 2020, 22:22:21) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 2.8, Platform Windows-10-10.0.18362-SP0
+2020-06-30 20:17:28 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2020-06-30 20:17:28 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'hotspot_crawler',
+ 'CONCURRENT_REQUESTS': 32,
+ 'COOKIES_ENABLED': False,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': './hotspot_crawler/log/20200630_201728.log',
+ 'NEWSPIDER_MODULE': 'hotspot_crawler.spiders',
+ 'SPIDER_MODULES': ['hotspot_crawler.spiders.TencentHotspot',
+                    'hotspot_crawler.spiders.SohuHotspot',
+                    'hotspot_crawler.spiders.XinhuaHotspot',
+                    'hotspot_crawler.spiders.HuanqiuHotspot',
+                    'hotspot_crawler.spiders.BaiduHotspot',
+                    'hotspot_crawler.spiders.FengHuangHotspot',
+                    'hotspot_crawler.spiders.SinaHotspot']}
+2020-06-30 20:17:28 [scrapy.extensions.telnet] INFO: Telnet Password: f141eab83317ef10
+2020-06-30 20:17:28 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2020-06-30 20:17:29 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'hotspot_crawler.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-30 20:17:29 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-30 20:17:29 [scrapy.middleware] INFO: Enabled item pipelines:
+['hotspot_crawler.pipelines.JSONWithEncodingPipeline']
+2020-06-30 20:17:29 [scrapy.core.engine] INFO: Spider opened
+2020-06-30 20:17:29 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-30 20:17:29 [FengHuangHotspot] INFO: Spider opened: FengHuangHotspot
+2020-06-30 20:17:29 [FengHuangHotspot] INFO: Spider opened: FengHuangHotspot
+2020-06-30 20:17:29 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-06-30 20:17:29 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'hotspot_crawler',
+ 'CONCURRENT_REQUESTS': 32,
+ 'COOKIES_ENABLED': False,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': './hotspot_crawler/log/20200630_201728.log',
+ 'NEWSPIDER_MODULE': 'hotspot_crawler.spiders',
+ 'SPIDER_MODULES': ['hotspot_crawler.spiders.TencentHotspot',
+                    'hotspot_crawler.spiders.SohuHotspot',
+                    'hotspot_crawler.spiders.XinhuaHotspot',
+                    'hotspot_crawler.spiders.HuanqiuHotspot',
+                    'hotspot_crawler.spiders.BaiduHotspot',
+                    'hotspot_crawler.spiders.FengHuangHotspot',
+                    'hotspot_crawler.spiders.SinaHotspot']}
+2020-06-30 20:17:29 [scrapy.extensions.telnet] INFO: Telnet Password: a5e2cfbc1cdc4bdc
+2020-06-30 20:17:29 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2020-06-30 20:17:29 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'hotspot_crawler.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-30 20:17:29 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-30 20:17:29 [scrapy.middleware] INFO: Enabled item pipelines:
+['hotspot_crawler.pipelines.JSONWithEncodingPipeline']
+2020-06-30 20:17:29 [scrapy.core.engine] INFO: Spider opened
+2020-06-30 20:17:29 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-30 20:17:29 [SinaHotspot] INFO: Spider opened: SinaHotspot
+2020-06-30 20:17:29 [SinaHotspot] INFO: Spider opened: SinaHotspot
+2020-06-30 20:17:29 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2020-06-30 20:17:29 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'hotspot_crawler',
+ 'CONCURRENT_REQUESTS': 32,
+ 'COOKIES_ENABLED': False,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': './hotspot_crawler/log/20200630_201728.log',
+ 'NEWSPIDER_MODULE': 'hotspot_crawler.spiders',
+ 'SPIDER_MODULES': ['hotspot_crawler.spiders.TencentHotspot',
+                    'hotspot_crawler.spiders.SohuHotspot',
+                    'hotspot_crawler.spiders.XinhuaHotspot',
+                    'hotspot_crawler.spiders.HuanqiuHotspot',
+                    'hotspot_crawler.spiders.BaiduHotspot',
+                    'hotspot_crawler.spiders.FengHuangHotspot',
+                    'hotspot_crawler.spiders.SinaHotspot']}
+2020-06-30 20:17:29 [scrapy.extensions.telnet] INFO: Telnet Password: 553a31d0e3671e2d
+2020-06-30 20:17:29 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2020-06-30 20:17:29 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'hotspot_crawler.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-30 20:17:29 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-30 20:17:30 [scrapy.middleware] INFO: Enabled item pipelines:
+['hotspot_crawler.pipelines.JSONWithEncodingPipeline']
+2020-06-30 20:17:30 [scrapy.core.engine] INFO: Spider opened
+2020-06-30 20:17:30 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-30 20:17:30 [SohuHotspot] INFO: Spider opened: SohuHotspot
+2020-06-30 20:17:30 [SohuHotspot] INFO: Spider opened: SohuHotspot
+2020-06-30 20:17:30 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6025
+2020-06-30 20:17:30 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'hotspot_crawler',
+ 'CONCURRENT_REQUESTS': 32,
+ 'COOKIES_ENABLED': False,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': './hotspot_crawler/log/20200630_201728.log',
+ 'NEWSPIDER_MODULE': 'hotspot_crawler.spiders',
+ 'SPIDER_MODULES': ['hotspot_crawler.spiders.TencentHotspot',
+                    'hotspot_crawler.spiders.SohuHotspot',
+                    'hotspot_crawler.spiders.XinhuaHotspot',
+                    'hotspot_crawler.spiders.HuanqiuHotspot',
+                    'hotspot_crawler.spiders.BaiduHotspot',
+                    'hotspot_crawler.spiders.FengHuangHotspot',
+                    'hotspot_crawler.spiders.SinaHotspot']}
+2020-06-30 20:17:30 [scrapy.extensions.telnet] INFO: Telnet Password: 39ddbb275beaa084
+2020-06-30 20:17:30 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2020-06-30 20:17:30 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'hotspot_crawler.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-30 20:17:30 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-30 20:17:30 [scrapy.middleware] INFO: Enabled item pipelines:
+['hotspot_crawler.pipelines.JSONWithEncodingPipeline']
+2020-06-30 20:17:30 [scrapy.core.engine] INFO: Spider opened
+2020-06-30 20:17:30 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-30 20:17:30 [TencentHotspot] INFO: Spider opened: TencentHotspot
+2020-06-30 20:17:30 [TencentHotspot] INFO: Spider opened: TencentHotspot
+2020-06-30 20:17:30 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6026
+2020-06-30 20:17:30 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'hotspot_crawler',
+ 'CONCURRENT_REQUESTS': 32,
+ 'COOKIES_ENABLED': False,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': './hotspot_crawler/log/20200630_201728.log',
+ 'NEWSPIDER_MODULE': 'hotspot_crawler.spiders',
+ 'SPIDER_MODULES': ['hotspot_crawler.spiders.TencentHotspot',
+                    'hotspot_crawler.spiders.SohuHotspot',
+                    'hotspot_crawler.spiders.XinhuaHotspot',
+                    'hotspot_crawler.spiders.HuanqiuHotspot',
+                    'hotspot_crawler.spiders.BaiduHotspot',
+                    'hotspot_crawler.spiders.FengHuangHotspot',
+                    'hotspot_crawler.spiders.SinaHotspot']}
+2020-06-30 20:17:30 [scrapy.extensions.telnet] INFO: Telnet Password: 88a67007094d3039
+2020-06-30 20:17:30 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2020-06-30 20:17:30 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'hotspot_crawler.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-30 20:17:30 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-30 20:17:31 [scrapy.middleware] INFO: Enabled item pipelines:
+['hotspot_crawler.pipelines.JSONWithEncodingPipeline']
+2020-06-30 20:17:31 [scrapy.core.engine] INFO: Spider opened
+2020-06-30 20:17:31 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-30 20:17:31 [XinhuaHotspot] INFO: Spider opened: XinhuaHotspot
+2020-06-30 20:17:31 [XinhuaHotspot] INFO: Spider opened: XinhuaHotspot
+2020-06-30 20:17:31 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6027
+2020-06-30 20:17:31 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'hotspot_crawler',
+ 'CONCURRENT_REQUESTS': 32,
+ 'COOKIES_ENABLED': False,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': './hotspot_crawler/log/20200630_201728.log',
+ 'NEWSPIDER_MODULE': 'hotspot_crawler.spiders',
+ 'SPIDER_MODULES': ['hotspot_crawler.spiders.TencentHotspot',
+                    'hotspot_crawler.spiders.SohuHotspot',
+                    'hotspot_crawler.spiders.XinhuaHotspot',
+                    'hotspot_crawler.spiders.HuanqiuHotspot',
+                    'hotspot_crawler.spiders.BaiduHotspot',
+                    'hotspot_crawler.spiders.FengHuangHotspot',
+                    'hotspot_crawler.spiders.SinaHotspot']}
+2020-06-30 20:17:31 [scrapy.extensions.telnet] INFO: Telnet Password: 2ed09bab450ee0d4
+2020-06-30 20:17:31 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2020-06-30 20:17:31 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'hotspot_crawler.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-30 20:17:31 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'hotspot_crawler.middlewares.HotspotCrawlerSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-30 20:17:31 [scrapy.middleware] INFO: Enabled item pipelines:
+['hotspot_crawler.pipelines.JSONWithEncodingPipeline']
+2020-06-30 20:17:31 [scrapy.core.engine] INFO: Spider opened
+2020-06-30 20:17:31 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-30 20:17:31 [BaiduHotspot] INFO: Spider opened: BaiduHotspot
+2020-06-30 20:17:31 [BaiduHotspot] INFO: Spider opened: BaiduHotspot
+2020-06-30 20:17:31 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6028
+2020-06-30 20:17:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://news.sina.com.cn/> (referer: None)
+2020-06-30 20:17:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://news.baidu.com/> (referer: None)
+2020-06-30 20:17:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://news.sohu.com/> (referer: None)
+2020-06-30 20:17:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://news.ifeng.com/> (referer: None)
+2020-06-30 20:17:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.xinhuanet.com/> (referer: None)
+2020-06-30 20:17:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://pacaio.match.qq.com/irs/rcd?cid=137&token=d0f13d594edfc180f5bf6b845456f3ea&id=&ext=top&page=0&expIds=&callback=__jp1> (referer: None)
+2020-06-30 20:17:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://baijiahao.baidu.com/s?id=1670914908167595360> (referer: http://news.baidu.com/)
+2020-06-30 20:17:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mil.news.sina.com.cn/jssd/2020-06-30/doc-iircuyvk1168395.shtml> (referer: https://news.sina.com.cn/)
+2020-06-30 20:17:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.sohu.com/a/404910308_115479> (referer: http://news.sohu.com/)
+2020-06-30 20:17:33 [scrapy.core.scraper] DEBUG: Scraped from <200 http://baijiahao.baidu.com/s?id=1670914908167595360>
+{'content': '病例1，男，61岁，住址为丰台区新村街道银地家园，新发地市场个体经营人员。6月13日由专车转运至集中隔离点进行集中医学观察。6月26日核酸检测结果为阳性。6月27日由120救护车转运至丰台中西医结合医院就诊，6月28日诊断为疑似病例，由120救护车转运至地坛医院，核酸检测结果为阳性，6月29日确诊，临床分型为普通型。病例2，男，49岁，住址为丰台区花乡(地区)经营者乐园，新发地市场个体经营人员。6月13日由专车转运至集中隔离点进行集中医学观察。6月26日核酸检测结果为阳性。6月27日由120救护车转运至丰台中西医结合医院就诊，6月28日诊断为疑似病例，由120救护车转运至地坛医院，核酸检测结果为阳性，6月29日确诊，临床分型为普通型。病例3，男，51岁，住址为丰台区花乡(地区)天骄俊园，新发地市场个体经营人员。6月13日由专车转运至集中隔离点进行集中医学观察，6月26日出现咳嗽、胸闷、胸痛等症状，6月27日由120救护车转运至丰台区南苑医院就诊，核酸检测结果为阳性，6月28日由120救护车转运至地坛医院，6月29日确诊，临床分型为普通型。病例4，男，64岁，住址为丰台区花乡(地区)乡新发地电商产业园南苑西路346号平房，新发地市场保洁员。6月13日由专车转运至集中隔离点进行集中医学观察，6月27日核酸检测结果为阳性，6月28日由120救护车转运至丰台中西医结合医院就诊，6月29日确诊，临床分型为普通型。病例5，男，63岁，住址为丰台区花乡(地区)乡新发地电商产业园南苑西路346号平房，新发地市场保洁员。6月13日由专车转运至集中隔离点进行集中医学观察，6月20日出现咳嗽等症状，未报告、未服药，6月27日核酸检测结果为阳性，6月28日由120救护车转运至丰台中西医结合医院就诊，6月29日确诊，临床分型为普通型。病例6，男，27岁，住址为丰台区花乡(地区)巴庄子，新发地市场个体经营人员。6月12日由专车转运至集中隔离点进行集中医学观察。6月26日出现发热、乏力等症状，6月27日由120救护车转运至丰台中西医结合医院就诊。当日由120救护车转运至地坛医院就诊，6月29日核酸检测结果为阳性，当日确诊，临床分型为普通型。病例7，女，70岁，住址为大兴区西红门(地区)镇星光巷7号保利达公寓，新发地市场个体经营人员。6月12日由专车转运至集中隔离点进行集中医学观察。6月27日出现发热等症状，由120救护车转运至丰台中西医结合医院就诊。6月28日由120救护车转运至地坛医院就诊，核酸检测结果为阳性，6月29日确诊，临床分型为普通型。病例1，女，31岁，住址为丰台区花乡(地区)经营者乐园，新发地市场个体经营人员。6月13日由专车转运至集中隔离点进行集中医学观察。6月26日核酸检测结果为阳性，6月27日由120救护车转运至丰台中西医结合医院就诊。6月28日确诊，临床分型为轻型。病例2，女，42岁，住址为丰台区花乡(地区)新发地国际名酒城，新发地市场个体经营人员。6月19日被确定为确诊病例的密切接触者，由专车转运至集中隔离点进行集中医学观察;6月27日核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院就诊。6月28日确诊，临床分型为普通型。病例3，女，25岁，住址为丰台区花乡(地区)新发地市场，近1年在大兴区黄村做家教，父母为新发地市场个体经营人员，平时与父母同住，6月14日由专车转运至集中隔离点进行集中医学观察。6月16日被确定为确诊病例的密切接触者。6月26日核酸检测结果为阳性，6月27日由120救护车转运至昌平区医院就诊，6月28日确诊，临床分型为普通型。病例4，男，37岁，住址为丰台区丰台街道东大街，保安。6月16日被确定为确诊病例的密切接触者，由专车转运至集中隔离点进行集中医学观察;6月26日核酸检测结果为阳性，6月27日出现发热等症状，当日由120救护车转运至丰台中西医结合医院就诊。6月28日确诊，临床分型为普通型。病例5，女，56岁，住址为丰台区新村街道银地家园，新发地市场个体经营人员。6月13日由专车转运至集中隔离点进行集中医学观察，6月26日核酸检测结果为阳性。6月27日由120救护车转运至丰台中西医结合医院就诊，6月28日确诊，临床分型为普通型。病例2，男，43岁，住址为丰台区花乡(地区)宜兰园，新发地市场个体经营人员。6月13日由专车转运至集中隔离点进行集中医学观察，6月26日出现发热症状，核酸检测结果为阳性。6月27日由120救护车转运至丰台中西医结合医院就诊，当日确诊，临床分型为普通型。病例1，女，31岁，住址为丰台区花乡(地区)天骄俊园，新发地市场个体经营人员。6月12日由专车转运至集中隔离点进行集中医学观察。6月26日核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院就诊，6月27日确诊，临床分型为普通型。病例2，男，47岁，住址为丰台区花乡(地区)经营者乐园，新发地市场个体经营人员。6月13日由专车转运至集中隔离点进行集中医学观察，6月26日出现咽痛等症状，核酸检测结果为阳性。6月27日由120救护车转运至丰台中西医结合医院就诊，当日确诊，临床分型为普通型。病例3，女，63岁，住址为丰台区花乡(地区)宜兰园，新发地市场保洁员。6月12日晚由专车转运至集中隔离点进行集中医学观察，6月27日核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院就诊，当日确诊，临床分型为普通型。病例4，女，53岁，住址为丰台区卢沟桥(地区)大屯村，新发地北水嘉伦市场便民超市A厅老郑州烩面馆员工。6月21日被确定为确诊病例的密切接触者，当日出现头痛、胸闷等症状。6月22日由专车转运至集中隔离点进行集中医学观察。6月23日核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院就诊。6月25日由120救护车转运至地坛医院，6月27日确诊，临床分型为轻型。病例5，男，49岁，住址为丰台区花乡(地区)天骄俊园，新发地市场个体经营人员。6月13日由专车转运至集中隔离点进行集中医学观察，6月26日出现症状,6月27日核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院就诊，当日确诊，临床分型为普通型。病例6，女，52岁，住址为丰台区花乡(地区)天伦锦城，新发地市场个体经营人员，6月16日由专车转运至集中隔离点进行集中医学观察，6月24日出现胸闷等症状，体温正常，6月27日核酸检测结果为阳性，由120救护车转至丰台中西医结合医院就诊，当日确诊，临床分型为普通型。病例8，女，43岁，住址为丰台区花乡(地区)天伦锦城，新发地市场个体经营人员。6月10日开始出现乏力、发热、咳嗽等症状，自行到诊所就诊并服药、输液治疗，体温恢复正常，但有咽痒等症状。6月13日至16日居家未外出。6月16日由专车转运至集中隔离点进行集中医学观察。6月26日核酸检测结果为阳性。6月27日由120救护车转运至丰台中西医结合医院就诊，当日确诊，临床分型为普通型。病例9，男，42岁，住址为大兴区高米店街道兴华大街二段，新发地市场个体经营者。6月12日由专车转运至集中隔离点进行集中医学观察，6月26日核酸检测结果为阳性。6月27日由120救护车转运至丰台中西医结合医院就诊，当日确诊，临床分型为普通型。病例10，女，39岁，住址为大兴区魏善庄镇北京密码，海淀区定慧谢小厨餐厅服务员。6月24日被判定为确诊病例的密切接触者，由专车转运至集中隔离点进行集中医学观察。6月25日出现全身酸痛等症状。6月26日由120救护车转运至大兴区人民医院就诊，核酸检测结果为阳性，6月27日确诊，临床分型为轻型。病例12，女，25岁，住址为大兴区西红门(地区)寿保庄村，北京大通远鑫汽车修理有限公司车险销售员，在北京车谷汽车销售有限公司办公。6月20日至23日上班或在家休息，曾在村内超市购物。6月24日出现流涕等症状，未服药、未就医。6月26日被确定为确诊病例的密切接触者，由专车转运至集中隔离点进行集中医学观察;当日核酸检测结果为阳性，由120救护车转运至大兴区人民医院就诊。6月27日确诊，临床分型为普通型。病例1，女，38岁，住址为丰台区花乡(地区)天伦锦城，新发地市场个体经营人员。6月12日由专车转运至集中隔离点进行集中医学观察，6月24日核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院就诊，6月26日确诊，临床分型为普通型。病例2，男，51岁，住址为丰台区花乡(地区)经营者乐园，新发地市场个体经营人员。6月12日由专车转运至集中隔离点进行集中医学观察，6月24日核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院，26日确诊，临床分型为普通型。病例3，女，51岁，住址为丰台区花乡(地区)经营者乐园，新发地市场个体经营人员。6月12日由专车转运至集中隔离点进行集中医学观察，6月24日核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院，26日确诊，临床分型为普通型。病例4，女，49岁，住址为丰台区花乡(地区)天伦锦城，新发地市场个体经营人员，6月12日由专车转运至集中隔离点进行集中医学观察，6月24日核酸检测结果为阳性，由120救护车送至丰台中西医结合医院，26日确诊，临床分型为普通型。病例5，女，46岁，住址为丰台区花乡(地区)新发地商户乐园，新发地市场个体经营人员。6月12日由专车转运至集中隔离点进行集中医学观察，6月24日核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院就诊，26日确诊，临床分型为普通型。病例6，男，43岁，住址为丰台区花乡(地区)天伦锦城，新发地市场个体经营人员。6月12日由专车转运至集中隔离点进行集中医学观察，6月24日核酸检测结果为阳性，由120救护车送至丰台中西医结合医院，26日确诊，临床分型为普通型。病例7，男，29岁，住址为丰台区花乡(地区)经营者乐园，新发地市场个体经营人员。6月12日由专车转运至集中隔离点进行集中医学观察，6月24日核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院，26日确诊。临床分型为普通型。病例8，女，55岁，住址为丰台区花乡(地区)宜兰园，新发地市场个体经营人员。6月12日由专车转运至集中隔离点进行集中医学观察，6月24日核酸检测结果为阳性，由120救护车送至丰台中西医结合医院，26日确诊，临床分型为普通型。病例9，男，30岁，住址为丰台区花乡(地区)经营者乐园，新发地市场销售人员。6月12日由专车转运至集中隔离点进行集中医学观察，6月24日核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院就诊，26日确诊，临床分型为普通型。病例10，男，27岁，住址为丰台区花乡(地区)天骄俊园，新发地市场个体经营人员，6月12日由专车转运至集中隔离点进行集中医学观察，6月24日出现咽部不适，核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院，26日确诊，临床分型为普通型。病例11，男，23岁，住址为丰台区花乡(地区)天伦锦城，新发地市场个体经营人员。6月12日由专车转运至集中隔离点进行集中医学观察。6月24日核酸检测结果为阳性，陆续出现发热、咽干、咳嗽等症状，由120救护车转运至丰台中西医结合医院就诊。26日确诊，临床分型为普通型。病例12，男，29岁，住址为丰台区花乡(地区)宜兰园，新发地市场个体经营人员。6月12日由专车转运至集中隔离点进行集中医学观察，6月24日核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院就诊，26日确诊，临床分型为普通型。病例13，女，55岁，住址为丰台区花乡(地区)经营者乐园，新发地市场个体经营人员。6月12日由专车转运至集中隔离点进行集中医学观察，6月24日核酸检测结果为阳性，由120救护车转运至丰台中西医结合医院就诊，26日确诊，临床分型为普通型。病例14，男，50岁，住址为丰台区新村街道银地家园，新发地市场个体经营人员。6月15日由专车转运至集中隔离点进行集中医学观察。6月22日核酸检测结果为阴性，新冠病毒IgM抗体阳性，由120救护车转运至丰台中西医结合医院就诊，26日核酸检测结果为阳性，当日确诊，临床分型为普通型。编辑常江',
+ 'publish_time': '2020-06-30 17:16:00',
+ 'title': '北京近4日37例确诊病例发现于集中隔离点',
+ 'url': 'http://baijiahao.baidu.com/s?id=1670914908167595360'}
+2020-06-30 20:17:33 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET http://baijiahao.baidu.com/s?id=1670914908167595360> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2020-06-30 20:17:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mil.news.sina.com.cn/jssd/2020-06-30/doc-iircuyvk1168395.shtml>
+{'content': '据印度《亚洲国际新闻》6月27日报道，印度军队已将防空导弹系统部署至拉达克东部地区。新闻并未明确指出是何种导弹，但结合印军目前装备现状来看，很有可能就是其自研的“天空”导弹（音译为“阿卡什”）。这款“天空”导弹是印度自主研制的第一款防空导弹，印度国内对这款导弹一直寄予厚望，将其和“烈火”导弹、“光辉”战斗机、“阿琼”坦克一同当成是“印度国防工业之光”，但是如果上述其他项目一样，“天空”导弹的研制过程也是漫长而艰辛，项目开始于1983年，但一直到2012年，才正式进入印度军中服役。图注：印度“天空”防空导弹系统“天空”导弹的原型脱胎于前苏联时期的SA-6/2K12Kub防空导弹，在研制过程中，印度军工部门也借鉴了美国爱国者导弹和俄罗斯S-300导弹等新一代防空导弹系统的先进设计，“天空”导弹重720公斤，弹长7.5米、弹径400毫米，最大作战距离30千米，作战高度25千米；导弹采用冲压-固体火箭组合发动机，最大马赫数3；采用破片杀伤式战斗部和近炸引信，采用半主动雷达引导+主动雷达寻的的制导方式，火控系统使用印度自行研制的拉贾德拉三坐标火控相控阵雷达，具有对付多目标能力，不过其探测距离仅有60-100千米，只能跟踪64个目标制导12枚导弹。一套“天空”导弹系统由导弹发射车、指挥车和相控阵雷达车组成，可采用多种模式部署。单一部署可以同时打击四个目标，也可同时对一个目标发射3枚导弹。群部署方式下可将8个单一系统整合成一套系统，增加了拦截概率。陆军对该导弹的要求是，拦截距离应该为24~24千米，单发拦截概率不低于80%，印度媒体声称，导弹命中率可达到98%，但这个数据一看就是吹嘘的结果，此前曾经屡次爆出印军对这款导弹不满意的消息，印军发现这款“天空”导弹的速度较慢，机动性不足，且整个系统的反应时间更长，雷达也无法实现360°全覆盖，而且这款导弹的价格也不便宜，印度空军共采购了8个中队的“天空”导弹，合同总价值9.25亿美元，而印度陆军则采购了2个团总计约2000枚导弹，合同总价值高达31亿美元。因此，虽然被印度国内寄予厚望，这款导弹也在某种程度上沦为“鸡肋”，替换印军老旧的SA-6导弹尚可，同世界先进中近程野战防空导弹相比，还有很大的差距。因此，不过，值得警惕的是，印度也并非没有后招，近年来，它们积极寻求与国外军事技术合作，比如，它们同以色列合作，研制了一款新型中程防空导弹系统（MR-SAM）。MR-SAM系统使用巴拉克-8导弹，导弹质量275千克，拥有一个60千克的弹头和一台双脉冲固体火箭发动机，最大速度2马赫最大射程70千米。MR-SAM系统使用有源相控阵火控雷达，具备360度全向覆盖的探测能力，导弹使用主动雷达制导和双向数据链，加上垂直发射系统的使用，具有很强的多目标交战能力。目前，该型导弹已经完成研制并批量生产交付印度军方，它将构成印度未来中程防空导弹系统的支柱。图注：印度和以色列联合研制的中程防空导弹系统（MR-SAM）此外，印军在2018年的时候，还斥资10亿美元，向美国采购了NASAMS防空导弹系统，NASAMS-2防空导弹源自1989年起为挪威空军研制的“挪威先进防空导弹系统”，它的主要理念是采用轻型车载发射装置发射，将空空导弹改装为防空导弹，结合成为一种高机动性的野战中近程、中低空防空导弹系统。此后美国雷神公司参与进来，对NASAMS进行改进提升，换装了新型雷达，并采用新型拦截弹以提升防空系统射程，最终开发出NASAMS-2防空导弹系统。NASAMS-2系统具有四个特点：一是所有备弹均可齐射，各枚导弹可以攻击预定的各个目标或集中攻击一个目标；二是各发射系统可以在指挥中心25千米之外分散部署，可360°转动，能够攻击任意方向入侵的目标，以延伸系统的火力打击范围；三是系统的软、硬件均适用于机场或雷达站进行野战部署；四是具有“俯视、俯攻”功能，可部署在山头上对低空突袭的飞机或直升机进行攻击，具有强大的防空能力。NASAMS-2防空导弹系统的另一个特点是可以兼容发射多种由空空导弹改装而成的各型拦截弹，比如AIM-9“响尾蛇”、先进“海麻雀”等，它主要发射的是加长加粗固体燃料装药的AIM-120C“阿姆拉姆”中程空空导弹，而2019年，美军为了进一步延伸其射程，为其改装了AIM-120ER增程型拦截弹。这些拦截弹，都有可能装配给印度军方购买的NASAMS-2防空导弹。图注：印度从美国采购价值10亿美元的国家先进防空导弹系统（NASAMS-II）除了中近程防空导弹之外，2019年，印度还宣布从俄罗斯订购了5个营的S400远程防空导弹系统，合同的总价值达到60亿美元，是俄罗斯有史以来签订的最大一笔防空导弹出口合同。按照原计划印度将在2021年底前获得这5个营的S400防空导弹系统，近日，印度防长杰纳特·辛格访问俄罗斯，希望能提前交付，但是遭到俄方拒绝。图注：印度催促俄方提前交付S400防空导弹，但是遭到俄方无情的拒绝综合来看，印度从国外斥巨资购买的防空导弹，在性能上无疑要比自研的“天空”导弹强大很多，一旦印度将它们部署到中印边境地区，确实会给中国空军在该区域的活动带来不小的压力，但是也丝毫无法动摇中国军队捍卫国家领土完整和主权利益的信心和决心。',
+ 'publish_time': '2020.06.30 11:48:00',
+ 'title': '印军在中印边境部署防空导弹性能差到连自己都嫌弃',
+ 'url': 'https://mil.news.sina.com.cn/jssd/2020-06-30/doc-iircuyvk1168395.shtml'}
+2020-06-30 20:17:33 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://mil.news.sina.com.cn/jssd/2020-06-30/doc-iircuyvk1168395.shtml> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2020-06-30 20:17:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.sohu.com/a/404910308_115479>
+{'content': '原标题：日本右翼组织渔船赴钓鱼岛，又被我海警追击约四小时（文/观察者网郭光昊）截至6月29日，中国海警已经连续77天在钓鱼岛附近海域巡航，再次刷新了自2012年9月日本单方面将钓鱼岛“国有化”以来的记录。近期，中方加大了在钓鱼岛附近海域巡航的力度和强度，再次以实际行动表明“钓鱼岛属于中国”。去年5月，曾有日本地方议员赴钓鱼岛海域“捕鱼”，被中国海警追击。类似情况今年再次发生：6月21日，日本两艘渔船在钓鱼岛附近海域“捕鱼”，返航时被四艘中国海警船包夹、跟踪了4个多小时。日方本次出海并不是单纯的经济活动，而是明白无误的政治宣示和挑衅。本次出海的两艘渔船均参加了八重山渔协：一艘为当地渔船“惠美丸”，另一艘是“日本文化频道-樱”名下的“第一樱丸”。“日本文化频道-樱”这家公司目前在各大视频网站上运营名为“樱频道”的账号，日常发布大量政治立场极端保守的视频节目，与日本保守派政客过从甚密。石垣市议会当时已确定将在22日表决议案，更改钓鱼岛所在行政区名称。“樱频道”社长水岛总19日毫不掩饰本次“捕鱼”的政治目的就是为了配合石垣市的行动：“（出海捕鱼）将成为日本实效支配钓鱼岛的重要证明。”本次行动他们也用视频全程记录，意图抢占舆论制高点。行动也如此前一样得到了石垣当地媒体《八重山日报》的跟踪报道。《八重山日报》报道，两艘渔船在6月20日晚8点多接受了日本海保临检，九点半左右驶离了石垣岛的登野城渔港。石垣岛距离钓鱼岛约170千米，渔船开了一夜，21日清晨抵达钓鱼岛南侧海域。《八重山日报》称，渔船抵达时，四艘中国公务船已在附近海域待命。捕鱼时，渔船附近有10艘以上日本海保船。“樱频道”自称，在他们准备返回时，四艘中国海警船以两艘为一组，呈左右包夹的态势跟踪驱逐日本渔船四个多小时。期间，日本海保船就近保护渔船，在二者之间航行。从视频画面中可以识别，在场的中国海警船包括4000吨级的海警2502、3000吨级的海警1304和海警2302。而在场的日本海保船包括1000吨级中型海保船“天城”（PL67）、“伊是名”（PL90）和180吨级小型海保船PS34、PS36等。两艘渔船最后于6月22日返回石垣岛。而中国海警船随后返回钓鱼岛附近海域，22日当天在钓鱼岛领海内巡航。共同社援引海保消息称，在钓鱼岛领海内巡航约四个小时。6月25日，一些自民党保守派议员和“樱频道”在东京的众议院第二议员会馆还举行了记者发布会，要求日本政府采取更“积极”的措施。会上除了展示渔获，还播放了约10分钟的记录视频。我外交部发言人赵立坚22日就钓鱼岛问题再次表达了中方立场：钓鱼岛及其附属岛屿是中国固有领土，中方维护领土主权的决心和意志坚定不移。日方通过所谓“更名”议案，是对中国领土主权的严重挑衅，是非法的、无效的，不能改变钓鱼岛属于中国的事实，我们对日方有关行径坚决反对。中方已通过外交渠道向日方提出严正交涉，并保留做出进一步反应的权利。',
+ 'publish_time': '2020.06.30 15:16:00',
+ 'title': '日本右翼组织渔船赴钓鱼岛，又被我海警追击约四小时',
+ 'url': 'https://www.sohu.com/a/404910308_115479'}
+2020-06-30 20:17:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_10407832530019630152%22%7D&n_type=1&p_from=4> (referer: http://baijiahao.baidu.com/s?id=1670914908167595360)
+2020-06-30 20:17:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_10407832530019630152%22%7D&n_type=1&p_from=4>
+{'content': '蓝鲸教育6月30日讯，昨日晚间，在北京市召开疫情防控第136场例行新闻发布会上，北京市教委发布了今年高考时间及具体安排。北京市委教育工委副书记，市教委新闻发言人李奕指出，2020年北京市高考将在7月7日至10日举行，其中7日、8日为全国统一高考时间，9日、10日为普通高中学业水平等级考试时间。7日考试科目为语文、数学，8日下午考试科目为外语，9日考试科目为物理、政治、化学，10日考试科目为历史、生物、地理。与往年不同的是，今年将根据疫情防控需求，将每考场考生人数从30人减至20人。据统计，今年北京考生49225人，将设立17个考区，132个考点。李奕强调，考前每天掌握考生健康状况，特别是考前第十四天和第三天，由区考试中心会同卫生健康部门，在各学校、各报名单位的配合下，对所有考生进行健康状态监控，无异常的考生可正常参加考试。',
+ 'publish_time': '2020-06-30 09:17:00',
+ 'title': '北京市高考时间确定，今年每考场人数减至20人',
+ 'url': 'https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_10407832530019630152%22%7D&n_type=1&p_from=4'}
+2020-06-30 20:17:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://news.ifeng.com/c/7xjCi0JWeTg> (referer: http://news.ifeng.com/)
+2020-06-30 20:17:35 [scrapy.core.scraper] DEBUG: Scraped from <200 http://news.ifeng.com/c/7xjCi0JWeTg>
+{'content': '受长江中上游强降雨影响，进入三峡水库的水量持续增多。为腾出一定库容迎接近期可能到来的洪水，三峡枢纽于29日上午开启两个泄洪孔，加大下泄流量。这是三峡枢纽今年首次泄洪。近期长江上游乌江、岷江、沱江有强降雨。受此影响，三峡水库入库流量27日下午开始增长。28日14时，三峡水库入库流量达4万立方米/秒，是27日14时的两倍。为应对此轮来水，长江防总要求将三峡水库下泄流量上调至日均3.5万立方米/秒。29日8时，三峡电站34台机组全开，总出力超过2000万千瓦，接近满发状态。目前，长江上游东部、长江中下游自西北向东南的强降雨过程仍在继续。记者从长江委水文局获悉，7月1日至2日，长江上游干流附近有中到大雨，局地暴雨。3日，嘉陵江上游、汉江上游有大雨，局地暴雨。7月上中旬，三峡水库可能迎来新一轮洪水。来源：新华视点微博记者：李思远',
+ 'publish_time': '2020.06.30 16:56:45',
+ 'title': '壮观！三峡工程今年首次泄洪，机组接近满发',
+ 'url': 'http://news.ifeng.com/c/7xjCi0JWeTg'}
+2020-06-30 20:17:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9601322600346321301%22%7D&n_type=1&p_from=4> (referer: http://baijiahao.baidu.com/s?id=1670914908167595360)
+2020-06-30 20:17:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9601322600346321301%22%7D&n_type=1&p_from=4>
+{'content': '今天下午，“世界城市日-青少年创新嘉年华”活动启动仪式在上海举行，标志着2020年“世界城市日青少年系列活动”正式拉开帷幕。“世界城市日”是联合国首个以城市为主题的国际日，也是中国政府在联合国推动设立的首个国际日。2013年12月，根据第68届联大决议，决定自2014年起将上海世博会闭幕之日——每年的10月31日设立为“世界城市日”，以推动全球城市可持续发展。城市日是上海世博会的主要精神遗产和重要城市文化品牌，在“城市，让生活更美好”城市日总主题框架下，中方与联合国共同组织主场庆典、论坛边会、知识分享、主题活动和社会宣传，不断提高城市日国内外的知晓度。图说：“世界城市日-青少年创新嘉年华”活动启动仪式举行官方图作为“世界城市日青少年系列活动”的一个重要项目——“世界城市日-青少年公益行”是上海世界城市日事务协调中心与上海侨爱公益发展交流服务中心共同打造的国际化公益平台，它以“世界城市日青少年公益基地”为载体，根据每年联合国人居署发布的世界城市日年度主题，以“课、赛、展、会”等多种形式开展青少年国际间的文化交流。2018年和2019年，“世界城市日-青少年公益行”活动成果曾经在联合国世界城市日全球主场（英国利物浦、俄罗斯叶卡捷琳堡）精彩亮相，获得国内外的高度关注和广泛好评。上海世界城市日事务协调中心主任成键透露，届时，“世界城市日青少年公益行”的部分创新成果将在上海主场活动上展示，以丰富2020世界城市日的活动。据上海侨爱公益发展交流服务中心理事长刘融先介绍，“世界城市日青少年公益基地”作为世界城市日的重要公益平台和载体，将邀请上海市青少年活动中心、虹口区科学技术委员会和炫动传播作为首批基地共建方，并将与虹口区政府合力打造“北外滩5G全球青少年创新港”，搭建一个中外青少年展示和交流创新成果的实体平台，大手牵小手，为创造和实现新时代都市发展新标杆的目标贡献智慧和力量。此外，作为“世界城市日青少年系列活动”的另一个重要项目——2020“世界城市日-青少年创新嘉年华”活动，将聚焦“智慧城市，为人类创造更美好的生活”这一主题，展现青少年“创意、创新、创造”成果。这是一个囊括智能机器人和创意编程、科创绘画、演讲辩论、工美技艺活力传承等各大精彩赛事和展览演出在内的全方位沉浸式创新文化盛事。活动将在众多机构和新媒体平台，与青少年线上线下以互动的方式开展。今年适逢中国上海世博会十周年，2020世博会也拟于明年在迪拜举行。“世界城市日-青少年创新嘉年华”的活动成果将满载中国青少年对未来城市的畅想和希望，走向联合国世界城市日和迪拜世博会这两个重要的国际舞台。（新民晚报记者吴翔）',
+ 'publish_time': '2020-06-30 15:13:00',
+ 'title': '“世界城市日-青少年创新嘉年华”正式启动，助力青少年的无限创意',
+ 'url': 'https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9601322600346321301%22%7D&n_type=1&p_from=4'}
+2020-06-30 20:17:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://news.sina.com.cn/c/2020-06-30/doc-iircuyvk1245672.shtml> (referer: https://news.sina.com.cn/)
+2020-06-30 20:17:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://news.sina.com.cn/c/2020-06-30/doc-iircuyvk1245672.shtml>
+{'content': '原标题：十三届全国人大常委会第二十次会议表决通过香港特别行政区维护国家安全法习近平签署主席令予以公布表决通过关于增加香港特别行政区基本法附件三所列全国性法律的决定栗战书出席会议新华社北京6月30日电十三届全国人大常委会第二十次会议30日在北京人民大会堂举行第二次全体会议、第三次全体会议和闭幕会。会议表决通过了《中华人民共和国香港特别行政区维护国家安全法》，国家主席习近平签署第49号主席令予以公布；表决通过了全国人民代表大会常务委员会关于增加香港特别行政区基本法附件三所列全国性法律的决定。会议决定免去胡泽君的审计署审计长职务，任命侯凯为审计署审计长，国家主席习近平签署第50号主席令予以任免。栗战书委员长出席会议。30日上午，常委会第二十次会议举行第二次全体会议。常委会组成人员162人出席会议，出席人数符合法定人数。会议经表决，全票通过了《中华人民共和国香港特别行政区维护国家安全法》。会议还审议了有关任免案。30日下午，常委会第二十次会议举行第三次全体会议。常委会组成人员163人出席会议，出席人数符合法定人数。会议审议了委员长会议关于提请审议《全国人民代表大会常务委员会关于增加〈中华人民共和国香港特别行政区基本法〉附件三所列全国性法律的决定（草案）》的议案。受委员长会议委托，全国人大常委会法制工作委员会主任沈春耀作了说明。30日下午，常委会第二十次会议举行闭幕会。常委会组成人员163人出席会议，出席人数符合法定人数。会议经表决，全票通过了《全国人民代表大会常务委员会关于增加〈中华人民共和国香港特别行政区基本法〉附件三所列全国性法律的决定》，决定将《中华人民共和国香港特别行政区维护国家安全法》列入《中华人民共和国香港特别行政区基本法》附件三，明确由香港特别行政区在当地公布实施。会议经表决，决定免去侯凯的国家监察委员会委员职务。栗战书委员长主持第二次全体会议和闭幕会，郝明金副委员长主持第三次全体会议。全国人大常委会副委员长王晨、曹建明、张春贤、沈跃跃、吉炳轩、艾力更·依明巴海、万鄂湘、陈竺、王东明、白玛赤林、丁仲礼、郝明金、蔡达峰、武维华，秘书长杨振武出席会议。国家监察委员会主任杨晓渡，国务委员王勇、肖捷，最高人民法院院长周强，最高人民检察院检察长张军，国家监察委员会负责人，全国人大各专门委员会部分成员，各省、自治区、直辖市人大常委会负责人，部分全国人大代表，以及有关部门负责同志等分别列席有关会议。各次全体会议前，栗战书委员长分别主持召开了十三届全国人大常委会第六十六次、第六十七次和第六十八次委员长会议，审议有关议题。全国人大常委会秘书长杨振武，全国人大常委会有关副秘书长，全国人大有关专门委员会、常委会有关工作委员会负责人就有关议题作了汇报。责任编辑：张申',
+ 'publish_time': '2020.06.30 18:02:00',
+ 'title': '十三届全国人大常委会第二十次会议表决通过香港特别行政区维护国家安全法',
+ 'url': 'https://news.sina.com.cn/c/2020-06-30/doc-iircuyvk1245672.shtml'}
+2020-06-30 20:17:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mil.news.sina.com.cn/zhengming/2020-06-30/doc-iircuyvk1174569.shtml> (referer: https://news.sina.com.cn/)
+2020-06-30 20:17:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mil.news.sina.com.cn/zhengming/2020-06-30/doc-iircuyvk1174569.shtml>
+{'content': '来源：兵工科技近年来，俄罗斯海军开始大量装备22800型导弹艇，这款导弹艇连千吨都不到，但是从其舰载系统来看，相控阵雷达，垂发导弹系统等应有尽有，甚至远超轻型护卫舰。22800型导弹艇排水量800吨，长65米，宽10米，最高航速30节，续航力2500海里，可独立执勤15天。该型导弹艇采用V型船体，其外形特征与已服役的21631型导弹艇极为相似，都采用较小的上层建筑，导弹垂发单元位于舰桥后部的平台上。从外形上来看，外形有明显的隐身特征，其上层建筑、主炮及防浪板的斜面设计使雷达回波被大幅削弱，该艇采用传统的小型平甲板艇型，艇体采用高强度合金钢建造，上层建筑采用铝镁合金。图注：从外形上来看，22800型导弹艇外形有明显的隐身特征，其上层建筑、主炮及防浪板的斜面设计使雷达回波被大幅削弱值得一提的是，22800护卫舰安装三台中国河南柴油机重工制造的CHD622V20CR型发动机，每台发动机额定功率为3600千瓦，搭配WVS2240船用齿轮箱及其控制系统，其航速最快可达30节，这么高的航速可以实施突击作战，且可以在实施首次打击任务后迅速撤离。图注：22800护卫舰安装三台中国河南柴油机重工制造的CHD622V20CR型发动机22800型导弹艇的“眼睛”很尖，配备Zaslon公司研制的4阵面固定式有源相控阵雷达，可同时对众多目标进行立体搜索、跟踪、识别和分类，根据威胁等级评估来导弹攻击。现在通常将装备有相控阵雷达的舰艇称为“盾舰”，那么22800无疑是其中吨位最小的，并且与“第二小”相比也要相差几个量级，开创了小型神盾战舰的先例。图注：22800型导弹艇配备Zaslon公司研制的4阵面固定式有源相控阵雷达与小身板形成强烈反差的是，22800型导弹艇火力配备非常强大，同其他国家的轻型护卫舰相比，一点也不逊色。该艇装备了一门先进的A-190M型100毫米舰炮，还装备了八联装3S14U1垂直发射系统，可以发射8枚“口径”导弹对地攻击巡航导弹，其中用于打击海上目标的导弹射程为350公里，打击地面目标射程超过2000公里，“口径”导弹可在50至150米的高度飞行，能够“突破任何反导系统”，使敌方难于发现，或者只留给敌舰极短反应时间，不能进行有效防护。在反舰能力方面，3S14U1垂直发射系统还可以发射P-800红宝石超音速反舰导弹，该导弹的作战距离为600千米。如果用作近海防御，22800型这样的小船完全有可能实施蜂群战术，发射P-800导弹对航母战斗群实施饱和攻击。除此之外，该轻型护卫舰还可以携带一些水雷和反潜火箭弹，执行小规模破交、反潜任务。图注：从模型上可以看出，22800型导弹艇装备了八联装3S14U1垂直发射系统，可以发射“口径”对地攻击巡航导弹和P-800超音速反舰导弹，火力配备十分强大图注：在火力配置方面，22800型导弹艇舰装备了一门先进的A-190M型100毫米舰炮，舰炮火力比一些国家的中型护卫舰都要更强以上可以看出，22800型导弹艇有吨位小，火力强悍，续航力大的特点，从该艇的身上就可以看出俄罗斯海军对于近海作战能力的重视。预计，在俄与北约位黑海地区博弈加剧的背景下，未来该型舰艇将优先配备给俄海军黑海舰队，与黑海舰队此前已经列装的21631型舰相配合，俄海军位黑海乃至地中海地区的海上作战实力将成倍增加，届时将对驶入地中海的美航母构成巨大威胁。',
+ 'publish_time': '2020.06.30 12:16:00',
+ 'title': '这款安装中国发动机的俄罗斯军舰火力竟然如此凶猛',
+ 'url': 'https://mil.news.sina.com.cn/zhengming/2020-06-30/doc-iircuyvk1174569.shtml'}
+2020-06-30 20:17:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://news.ifeng.com/c/7xjDKNGFjIQ> (referer: http://news.ifeng.com/)
+2020-06-30 20:17:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://news.ifeng.com/c/7xjDKNGFjIQ>
+{'content': '【文/观察者网齐倩】近日，澳大利亚媒体和部分官员大肆炒作“网络攻击”议题，以此为由头往中国身上泼脏水。如今，澳大利亚背后的小算盘开始暴露了。就在前不久，澳总理莫里森声称，一个“老练的、国家主导的网络行为者”一直在针对澳大利亚进行网络攻击。尽管他并未提及攻击者具体身份，但澳媒体和反华智库立即与莫里森“一唱一和”污蔑中国。在连番炒作后，澳政府宣称要抵御“外国网络攻击”，高调宣布向该国网络安全部门注资。据《悉尼先驱晨报》报道，莫里森将于当地时间6月30日宣布，未来10年将增加投入13.5亿澳元（约合人民币65.6亿元）资金，并招募500名网络间谍，用于增强该国网络安全防御和攻击能力。《悉尼先驱晨报》29日报道截图报道称，这笔资金将被拨款至澳大利亚信号局（ASD）和其他网络安全部门、主要电信运营商，用于打击“外国网络犯罪分子和更好地识别恶意黑客”。《悉尼先驱晨报》指出，这是澳大利亚网络防御史上规模最大的资金注入计划。根据该计划，属于国防部的澳大利亚信号局，将获得1.18亿澳元资金，用于扩大其数据科学和情报能力，以识别未来10年澳大利亚面临的新兴网络威胁。该机构还将与其他政府部门和企业实时共享情报。《悉尼先驱晨报》称，此次计划将招募500名网络间谍。未来十年，澳大利亚信号局还将花费4.7亿澳元用于招募工作。此外，澳大利亚将斥资3100万澳元用于用于提高该国打击海外网络犯罪的能力；还将耗资2500万澳元设立一个网络威胁共享平台，允许业界和政府分享有关恶意网络活动的情报。值得注意的是，澳政府已经聘请美国前国土安全部部长克里斯汀·尼尔森（KirstjenNielsen）来帮助准备这一总投入达十数亿澳元的网络安全计划。澳大利亚国防部长琳达·雷诺兹（LindaReynolds）表示，上述13.5亿澳元的资金注入将对所有澳大利亚人的网络安全产生切实影响。她说:“该计划将使国家在打击网络威胁方面处于领先地位，我们对网络安全工作人员的投资将有助于确保我们拥有应对未来网络挑战所需的人才。”报道还指出，这一价值13.5亿澳元的注资计划，将使澳大利亚信号局成为澳大利亚“2020年网络安全战略”的关键部分。该战略将于未来几月发布。莫里森6月19日发言，视频截图“联邦政府的首要任务是保护国家的经济、国家安全和主权。恶意网络活动破坏了这一点。”澳大利亚总理莫里森周二声称，针对澳大利亚的恶意网络攻击在频率、规模和复杂性上都在增加。莫里森表示，澳政府在国家网络安全方面“创纪录的投资”，将有助于确保该国拥有反击和保护澳大利亚人安全所需的工具和能力。澳总理莫里森口中的“网络攻击”来自何处？他这一次依旧没说出所以然。但包括《悉尼先驱晨报》在内的澳大利亚和外国媒体再次“捕风捉影”，将澳政府此次注资计划与中国强行扯在一起。此前，莫里森曾于6月19日召开记者会表示，澳大利亚目前正遭受一次重大网络攻击，“攻击对象是各级政府，政党和私营企业”。他声称，攻击者是一个“老练的、国家主导的网络行为者”。莫里森并未向公众提供相关具体信息和攻击者身份，但部分澳大利亚媒体和专家官员“随风起舞”，妄图把脏水泼向中国。著名反华智库澳大利亚战略研究所执行董事宣称，莫里森就是在“点名中国”。对于部分澳媒和官员的污蔑，我国外交部发言人赵立坚在6月19日的记者会上回应称，澳大利亚战略政策研究所对中国的攻击指责“完全没有事实依据，纯属一派胡言”。赵立坚表示：中国是网络安全的坚定维护者，也是黑客攻击的最大受害国之一。我们历来坚决反对并依法打击一切形式的网络黑客攻击行为。这一立场是一贯和明确的。至于你提到的具体情况，这是澳战略政策研究所提出的吧？近期中方多次指出，这个机构长期接受来自美国政府和军火商的经费支持，热衷于炮制和炒作各种反华议题，已经沦为反华“急先锋”，没有任何信誉可言。该机构对中国的攻击指责完全没有事实依据，纯属一派胡言。',
+ 'publish_time': '2020.06.30 17:16:45',
+ 'title': '被中国迫害妄想症再发作后，澳大利亚小算盘暴露',
+ 'url': 'http://news.ifeng.com/c/7xjDKNGFjIQ'}
+2020-06-30 20:17:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://pacaio.match.qq.com/irs/rcd?cid=137&token=d0f13d594edfc180f5bf6b845456f3ea&ext=top&page=11&callback=__jp14> (referer: https://pacaio.match.qq.com/irs/rcd?cid=137&token=d0f13d594edfc180f5bf6b845456f3ea&id=&ext=top&page=0&expIds=&callback=__jp1)
+2020-06-30 20:17:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://baijiahao.baidu.com/s?id=1670852409110574829> (referer: http://news.baidu.com/)
+2020-06-30 20:17:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://baijiahao.baidu.com/s?id=1670852409110574829>
+{'content': '近日，"蚂蚁矿机ANTMINER"在微博发布北京比特大陆科技有限公司（以下简称"北京比特大陆"）关于近期经营协作的磋商及实时进展公告，称两位大股东——即詹克团与吴忌寒已就目前公司的生产经营问题达成了共识。但令外界错愕的是，该公告很快被删除。自2019年10月以来，比特大陆科技控股公司（于开曼群岛注册成立以不同投票权控制的有限公司，下称“比特大陆”）两大股东吴忌寒和詹克团争斗就从未停过，双方数次通过各种渠道发布公告，就公司法人、公章、公众号归属等问题争执不下，甚至还在今年5月上演了"当当式"抢夺营业执照戏码。而在比特大陆股东内斗不断的同时，竞争对手嘉楠耘智和亿邦国际已经成功在美股上市。有业内人士向雷达财经表示，如果比特大陆大股东内斗迟迟不解决，不排除被竞争对手超越。公开资料显示，吴忌寒毕业于北京大学经济学院，主要负责比特大陆市场业务，而来自中国科学院微电子研究所的詹克团则被看作比特大陆"技术大脑"。在二人的努力下，比特大陆发展迅速。2018年比特大陆向香港联交所递交的招股书显示，按2017年收入计，这家公司就已经是中国第二大、全球前十大无晶圆厂芯片设计公司、全球第四大无晶圆厂ASIC芯片设计公司。而根据Frost&Sullivan数据,以2017年收入计算,比特大陆是全球最大的基于ASIC的加密货币矿机公司,占有全球74.5%的市场份额。2017年和2018年上半年，比特大陆的营收分别为25.17亿美元、28.45亿美元，净利润分别为7.01亿美元、7.42亿美元，调整后净利润（不包括股权激励费用及可换股可赎回优先股的公允价值变动）均为9.52亿美元。但毛利率却从2016年顶峰的54.5%下降至2018年前6个月的36.2%。自成立以来，比特大陆共完成三轮融资：2017年8月A轮融资5000万美元，2018年6月B轮融资2.9亿美元，2018年8月B+轮融资4.4亿美元。参投方包括IDG资本、红杉资本、美国对冲基金CoatueManagement、新加坡政府投资基金EDBI等。然而业绩辉煌的背后，两位创始人出现裂痕。据媒体报道，吴忌寒和詹克团在公司发展方面的看法不尽相同。吴忌寒想继续扩大比特大陆在数字货币领域的份额，同时在国际化道路上努力，而詹克团则希望将比特大陆转型为人工智能方向。据21世纪经济报道，2018年正逢比特币大跌，吴忌寒的比特币现金计划亏损了30多亿人民币的资产，他也因此在年底卸任自己在比特大陆的所有职务并退出核心决策层。但吴忌寒很快卷土重来。2019年10月29日，吴忌寒发布内部信，解除詹克团在北京比特大陆的一切职务。内部信要求，比特大陆任何员工不得再执行詹克团的指令，不得参加詹克团召集的会议，如有违反，公司将视情节轻重考虑解除劳动合同，这被外界看作比特大陆内斗正式爆发的起点。当时，詹克团正在深圳参展2019年深圳安博会。等他回到比特大陆时，却发现自己已被禁止进入公司的办公区域。从股权结构看，当时詹克团更占优势。当时，詹克团持股36%，吴忌寒持股20.25%，而由于开曼公司实行AB股，詹吴两人手中所持的B股均有10倍投票权，詹克团占据59.6%的投票权。不过，比特大陆在去年11月举行的股东大会上就取消了詹克团的10倍投票权，改为1股1票，这使詹克团丧失了投票优势。詹克团随即聘请汉坤律师事务所，向北京市海淀区人民法院提起行政诉讼，对北京市海淀区市场监督管理局作出的工商变更登记表示异议，与此同时还发起第一次行政复议，请求撤销比特大陆变更法定代表人和执行董事的行为。据彭博社报道，詹克团在2019年12月还曾提交传票，要求开曼群岛法院撤销股东大会上取消AB股的决定，但这一国际诉讼至今尚未做出最终判决。2020年1月31日，北京市海淀区司法局同意了詹克团的撤销申请，但早在1月2日，比特大陆就再次将法人由吴忌寒换为公司首席财务官刘路遥，这一布局使得詹克团夺回法定代表人身份的想法落空。今年2月12日，詹克团提起第二次行政复议，请求撤销海淀区市场监管局批准的1月2日法人变更登记行为，并将比特大陆法人恢复为自身。今年4月28日，北京市海淀区司法局正式撤销刘路遥法定代表人身份，北京比特大陆在市场监管部门登记的状态恢复至2019年10月28日之前。对此，吴忌寒一方认为，因为北京比特大陆由香港的BitmainTechnologiesLimited（下称“香港比特大陆”）100%控股，而注册于开曼群岛的BitMainTechnologiesHoldingCompany（比特大陆）100%持股香港比特大陆，因此北京地区比特大陆的法人任免本应由开曼、香港股东决定，而非行政机关。4月27日和4月29日，微信公众号"比特大陆科技"连续发布两则声明，称詹克团无视公司及全体员工的共同利益，在疫情特殊时期恶意提起诉讼，干扰公司的正常运营，破坏国家保稳定、保增长的方针。并已对詹克团可能采取的5项破坏活动做好充分准备，严阵以待。5月28日，一场“大戏”上演。当日上午，詹克团在海淀区政务服务中心二楼52号窗口领取自己为法定代表人的北京比特大陆公司营业执照时，营业执照被一群不明身份的大汉从工商行政人员手中抢走，其中刘路遥在现场指挥了这次有计划的"抢劫"。就在刘路遥率人"抢执照"的当天，香港比特大陆微博发表声明文章，称"詹克团已不在\'北京比特\'担任任何职务，也未经本公司授权，无权领取本公司营业执照。市场监管部门公示登记显示詹克团为我司法定代表人属于登记错误，且严重违反《公司法》的规定。公司唯一合法的法定代表人为总经理刘路遥。"虽然詹克团营业执照被抢走，但在国家企业信用信息公示系统中，詹克团已是北京比特大陆法定代表人。至此，北京比特大陆在9个月内，已三次更换法定代表人。重新担任法定代表人后，詹克团开始了“清算”之旅。5月25日，詹克团以北京比特大陆法定代表人的身份签发了对刘路遥的"解除劳动关系通知"。在解除文件中，刘路遥被指存在严重违反公司规章制度的行为，包括但不限于5月8日在海淀区市场监督管理局依法向公司法人詹克团发放营业执照过程中，组织、策划并参与抢夺营业执照。5月27日下午，北京比特大陆发布声明称，公司已于2019年10月28日通过股东决定免去詹克团的公司执行董事、法定代表人职务，且于2019年11月5日通过执行董事决定免去詹克团经理职务。鉴于此，詹克团无权以公司法定代表人、执行董事或经理的名义从事任何行为。解除刘路遥劳动合同失效后，詹克团很快又将注意力转移到了公章上。6月10日，詹克团一方通过微信公众号"比特大陆科技"发布"关于启用新公章并作废旧公章的声明"，表示旧公章于5月8日起失效，新公章于6月1日起生效。一天之后，比特大陆官网发布声明称，北京比特大陆和香港比特大陆发现微信公众号"比特大陆科技"于2020年6月10日登陆状态异常，并宣布当日发布的信息内容虚假，不代表北京比特大陆真实意志。目前唯一合法有效的公章是编号为1101070056574的公章。6月13日，比特大陆官网发布北京比特大陆和香港比特大陆联合声明书，再次强调2019年10月免职詹克团行为的真实性，并列举了詹克团行为：包括非法取得所谓北京比特大陆印章证照、假借北京比特大陆名义行事、与其持股的海南大陆方舟数据科技有限公司签署《销售代理协议》等。声明中重申：加盖詹克团以非法手段取得的所谓北京比特公章（编号1101081651178）的任何文件，北京比特大陆与香港比特大陆均不予认可。北京比特公章（编号1101070056574）由吴忌寒授权人员保管，正常使用。一周后，詹克团在微博上给予回应，坚持原公章（编号为1101070056574）已作废，自己手中的新公章（编号为1101081651178）系比特大陆唯一合法有效的公章。比特大陆官网随即发布第三封公告，称比特大陆充分支持吴忌寒，并称香港比特大陆已经暂时停止了向詹克团亲属所控制的世纪云芯的芯片供给。6月21日，一份比特大陆员工发布的"对吴忌寒不合法、不守法、不懂法行为的说明"的声明流出。声明称"吴忌寒所有的行为都是建立在不合法基础上的非法行为，正在将比特大陆和一部分员工拖入深渊"。除此之外，声明中还提到："在詹克团重获比特大陆控制权后，吴忌寒采取了如抢执照、转移公司文件和资产、冒用公司名义造谣等严重违法的疯狂行为。詹克团正在以40亿美元估值收购吴忌寒及其他老股东和部分员工的股份，并将以法律手段解决此问题。"对此，比特大陆官网于6月23日再发公告，重申2019年11月股东大会废除十倍投票权的决议合法有效。公告称，行政机关无权否决该等决定中有关北京比特管理者任免的内容，无论公司登记信息目前状态如何，都不改变詹克团先生已不在北京比特任职、无权代表北京比特行事之事实。公告强调，北京比特的公章一直处于妥善保管、合法使用状态，公司并未申请挂失、重刻公章。同样在6月23日，吴忌寒控制下的微信公众号“蚂蚁矿机ANTMINER”发布了关于北京比特大陆经营协作的磋商及实施进展公告，表示本着为比特大陆负责的原则，两位大股东派出代表，在热心股东和热心第三方的帮助下，就公司生产经营等基本问题进行了磋商，并初步达成了共识。主要共识包括：第一，尽可能维持公司正常生产经营秩序，特别是降低对外部客户和供应商的影响；第二，保持公司账务及时和完整，确保公司财税合规；第三，稳定公司员工。然而，蚂蚁矿机发布的声明很快被删除，这让外界颇为错愕。陷于内斗的比特虽然早在2018年9月，即向港交所递交招股书，然而直至今日，比特大陆依然未能登陆资本市场。而比特大陆的竞争对手嘉楠耕智已经在2019年年底成功赴美上市，而亿邦国际在今年6月26日已成功在美股上市。据亿邦国际6月17日递交的最新版招股书显示，该公司拟发行1932.36万股，发行价区间为4.5美元到6.5美元，拟募资金额为8695万美元到1.25亿美元，若承销商行使选择权全额购买额外的A类普通股，则最高发行总量达2222.214万股，由此计算，最高可募资1.44亿美元。与此同时，亿邦国际的新招股书中公布了其2020年第一季度未经审计的财务报告。报告显示，截至2020年3月31日，亿邦国际第一季度营收为640万美元，同比增长6.1%；营收成本590万美元，同比下降3.9%。另外，亿邦国际净亏损在进一步扩大，已从2019年第一季度净亏损60万美元，扩大至2020年一季度的250万美元。对此，亿邦国际解释，净亏损扩大主要原因为地方政府退税大幅减少，此外，亿邦国际收入主要集中在比特币采矿机上，比特币价格的大幅下跌将对公司比特币采矿机库存的价值产生负面影响。6月26日，亿邦国际正式登陆纳斯达克，发行价格为5.23美元，首日开盘后迅速破发至4.60美元，并一路走低，最低触及3.81美元，相较发行价暴跌27.15%，随后股价上涨，最终收盘价格为5美元。有区块链从业人士向雷达财经表示，嘉楠耘智和亿邦国际上市后，可以获得资本输血。虽然比特大陆相比竞争对手，盈利能力更强，技术更好，但如果股东一直处于内斗状态，不安心做好经营，存在被竞争对手超越的风险。注：本文是雷达财经（ID：leidacj）原创。未经授权，禁止转载。',
+ 'publish_time': '2020-06-30 00:43:00',
+ 'title': '比特大陆版“权力的游戏”：免职、抢营业执照、和解共识被删',
+ 'url': 'http://baijiahao.baidu.com/s?id=1670852409110574829'}
+2020-06-30 20:17:38 [scrapy.core.downloader.tls] WARNING: Remote certificate is not valid for hostname "www.xinhuanet.com"; VerificationError(errors=[DNSMismatch(mismatched_id=DNS_ID(hostname=b'www.xinhuanet.com'))])
+2020-06-30 20:17:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://new.qq.com/omn/20200630/20200630A0IA8700.html> (referer: https://pacaio.match.qq.com/irs/rcd?cid=137&token=d0f13d594edfc180f5bf6b845456f3ea&ext=top&page=11&callback=__jp14)
+2020-06-30 20:17:38 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.xinhuanet.com/> (referer: None)
+2020-06-30 20:17:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.xinhuanet.com/>: HTTP status code is not handled or not allowed
+2020-06-30 20:17:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9535483762436488814%22%7D&n_type=1&p_from=4> (referer: http://baijiahao.baidu.com/s?id=1670914908167595360)
+2020-06-30 20:17:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9535483762436488814%22%7D&n_type=1&p_from=4>
+{'content': '网络的快速发展加上社交平台的便利，使得信息传播速度日期加快。不过，便捷的网络和平台也成为一些谣言高发地，尤其是我们在刷朋友圈的过程中，经常会看到各种各样危言耸听的消息。日前，微信官方对外公布了六月朋友圈十大谣言，包括进口海鲜传播新冠、发往北京的快递停运等。日前，有消息称：“进口的海鲜感染新冠病毒，然后在农贸市场里传播给了人群”。对此，国家食品安全风险评估中心微生物实验室主任李凤琴辟谣称，包括海鲜在内的所有食物不会感染病毒，但是存在被新型冠状病毒污染的可能。海关现在对于进口食物每批次都会抽样进行检测。同时，还有传言称国外包裹里有新冠肺炎污染物。对此，微信方面指出，真相为：目前尚未有因接收快递而感染新型冠状病毒肺炎的报道。国外包裹进入中国会经过海关严格筛查和重重消毒处理。并且，近日，一则“受疫情影响，部分快递公司暂停往北京发货”的消息在网络上流传。经核实，邮政、顺丰等物流企业从未发布过类似通知，目前北京流向的快递仍可正常收寄。但因北京个别区域升级管控措施，部分包裹时效或受影响。除了上述谣言之外，零下20℃新冠病毒可存活20年、五台山不接待北京河北等地游客、喝白酒能抗癌、艾滋血滴入食物致多人感染、蚊蝇传播新冠病毒、伏天喝热水可逼出深入骨髓的寒气以及北京新发地几万人被运送到河北唐山隔离等也成为6月备受关注的谣言。【来源：Techweb】【作者：老喵】',
+ 'publish_time': '2020-06-30 19:50:00',
+ 'title': '微信朋友圈六月十大谣言包括发往北京的快递停运等',
+ 'url': 'https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9535483762436488814%22%7D&n_type=1&p_from=4'}
+2020-06-30 20:17:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://news.sina.com.cn/c/2020-06-30/doc-iirczymk9677165.shtml> (referer: https://news.sina.com.cn/)
+2020-06-30 20:17:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://news.sina.com.cn/c/2020-06-30/doc-iirczymk9677165.shtml>
+{'content': '原标题：申纪兰同志遗体告别仪式在长治举行来源：山西日报山西日报报道：6月30日上午9时，全国优秀共产党员，全国劳动模范，第一至第十三届全国人大代表，“共和国勋章”获得者申纪兰同志遗体告别仪式在长治殡仪馆举行，当地万余群众自发前往送行。6月28日凌晨，申纪兰在山西长治因病逝世，享年91岁。责任编辑：张迪',
+ 'publish_time': '2020.06.30 10:40:00',
+ 'title': '申纪兰遗体告别仪式举行万余群众自发前往送行',
+ 'url': 'https://news.sina.com.cn/c/2020-06-30/doc-iirczymk9677165.shtml'}
+2020-06-30 20:17:39 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (307) to <GET https://www.sohu.com/a/404966117_123753> from <GET http://www.sohu.com/a/404966117_123753>
+2020-06-30 20:17:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://baijiahao.baidu.com/s?id=1670890939763251893> (referer: http://news.baidu.com/)
+2020-06-30 20:17:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9546156648923894675%22%7D&n_type=1&p_from=4> (referer: http://baijiahao.baidu.com/s?id=1670914908167595360)
+2020-06-30 20:17:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://baijiahao.baidu.com/s?id=1670890939763251893>
+{'content': '【TechWeb】6月30日消息，据国外媒体报道，自从特斯拉的弗里蒙特工厂恢复正常运营以来，该公司一直努力在第二季度尽可能取得成功。当地时间周一，电动汽车制造商特斯拉的首席执行官（CEO）埃隆·马斯克（ElonMusk）在一封内部电子邮件中呼吁员工努力工作，帮助该公司在第二季度新冠疫情期间实现收支平衡。与此同时，瑞信对特斯拉2020年第二季度的交付和生产数据进行了预测。瑞信分析师丹·利维（DanLevy）在一份给投资者的报告中表示，特斯拉第二季度的交付量可能在9万至10万辆之间，而卖方的普遍预期是7万辆，买方的普遍预期可能是8万辆。他预计，在特斯拉第二季度的交付量中，约有3.1万辆来自该公司的上海工厂，不到3.5万辆来自其弗里蒙特工厂，约有2.5万辆来自全球库存。此外，他还预计，特斯拉第二季度的产量约为7.6万至8.8万辆。他表示，与几周前相比，该公司实现季度盈利并不是一个激进的想法。此前，由于受疫情影响，特斯拉的弗里蒙特工厂从3月24日开始临时停产。在关闭了一个多月后，该工厂于5月18日重新开业。不过，在该工厂再次开放并重新生产电动汽车之后，其产能要达到3月24日停产之前的水平还需要一段时间。当地时间周一，马斯克呼吁员工在第二季度末迅速生产和交付汽车，以实现特斯拉的具体目标。截至当地时间周一美股收盘，特斯拉股价上涨5.17%，报收于1009.35美元。如果按照收盘价计算，该公司的中市值为1872.10亿美元。（小狐狸）',
+ 'publish_time': '2020-06-30 10:56:00',
+ 'title': '马斯克呼吁员工努力工作帮助特斯拉在Q2实现收支平衡',
+ 'url': 'http://baijiahao.baidu.com/s?id=1670890939763251893'}
+2020-06-30 20:17:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://news.ifeng.com/c/7xjEGdp70am> (referer: http://news.ifeng.com/)
+2020-06-30 20:17:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9546156648923894675%22%7D&n_type=1&p_from=4>
+{'content': '南方网讯（记者/王子宁通讯员/粤海综）针头岩是我国49个大陆领海基点之一，也是惠州市唯一的领海基点，位于红海湾正南方约20海里处，该区域是进出粤、港船舶的主要航道。为加强海域海岛管理，保护海洋渔业资源，6月29日，广东省海洋综合执法总队惠州支队对针头岩领海基点的保护情况及附近渔场进行巡航检查。执法组于早上8时30分到达针头岩附近海域开始巡航，对所遇渔船进行检查。执法人员于12时11分登上针头岩，采取绕点观察和登岛检查相结合的方式进行巡查，重点检查领海基点标志是否完好，基点保护范围内是否有进行工程建设以及其他可能改变该区域地形、地貌的活动，对基点标志及所在海岛进行了记录、拍照和摄像。通过巡查，发现针头岩领海基点岛地形、地貌完好，岛上有海鸟筑巢栖息。此次巡航历时10个小时，航行120海里，共检查渔船3艘，查扣1艘涉嫌改变作业方式船只，清理海上违规渔网约两百米，圆满完成巡航任务。',
+ 'publish_time': '2020-06-30 16:19:00',
+ 'title': '广东省海洋综合执法总队惠州支队开展领海基点执法巡查',
+ 'url': 'https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9546156648923894675%22%7D&n_type=1&p_from=4'}
+2020-06-30 20:17:40 [scrapy.core.scraper] DEBUG: Scraped from <200 http://news.ifeng.com/c/7xjEGdp70am>
+{'content': '东方网·纵相新闻记者单珊据"朝鲜新闻"（NKnews）网6月30日报道，新冠疫情席卷全球以来，朝鲜国内共对922人做了新冠病毒检测，目前仍有255人处于隔离观察中。这些信息来自世卫组织驻朝鲜代表埃德温·萨尔瓦多，也是两个月以来，世卫组织对朝鲜疫情信息的首次更新。萨尔瓦多在邮件中表示，他于6月19日得知，朝鲜国内受检测的922人结果均为阴性，目前仍有255人处于隔离中，他们是此前在中朝边境（丹东-新义州）工作的朝鲜劳工。目前，该国累计解除隔离25551人。据悉，朝鲜所有疑似病例（包括轻度、中度和重度）都被隔离在指定的县级或省级医院内进行管理，即使是轻度疑似病例也没有采取居家隔离措施。萨尔瓦多再次强调，朝鲜目前仍然是0确诊的状态。尽管如此，朝鲜官方媒体仍然呼吁读者在"紧急隔离工作"中"不要松懈"。目前，朝鲜自1月开始实施的关闭边境措施仍未松懈。但药品和医疗用品，已经被优先运往国内，以确保民众能够获得卫生服务。萨尔瓦多还透露，中国上周向朝鲜公共卫生部门捐赠了900件个人防护用品和部分实验室试剂，来自迪拜的2000件个人防护设备将很快到达平壤。目前，朝鲜有15个实验室被指定测试新冠病毒。世卫组织上一次发布朝鲜疫情信息是在4月17日，当时有740人接受病毒检测，共计25139人解除隔离。报道称，朝鲜公共卫生部门一直在与世卫组织分享每周最新情况，介绍疫情应对措施，并强调该国遵循了世卫组织防疫方面的指导方针。此外，萨尔瓦多证实，朝鲜国内所有教育机构都已于6月开学，不过，学生仍然需要佩戴口罩。进入所有公共场所，包括购物中心、餐厅和酒店等，都要进行温度检测和洗手消毒措施。在公共场所戴口罩仍然是"强制性的"，且"不允许公众集会"。根据新华社此前对朝鲜国家卫生检疫院院长朴明守的专访，疫情发生以来，朝鲜将卫生防疫体系转为"国家紧急卫生防疫体系"，抗疫成功之处在于高层重视并及早开展严格防疫措施。目前，全球新冠确诊病例累计已超过1000万例，死亡病例累计破50万例。世卫组织警告说，近期疫情又出现加速传播的趋势。世卫组织总干事谭德塞29日表示，未来数月所有国家将与病毒共存。',
+ 'publish_time': '2020.06.30 17:18:41',
+ 'title': '世卫再次确认朝鲜零感染：922例检测均阴性、解除隔离2.5万人',
+ 'url': 'http://news.ifeng.com/c/7xjEGdp70am'}
+2020-06-30 20:17:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://openapi.inews.qq.com/getQQNewsNormalContent?id=20200630A0IA8700&refer=mobilewwwqqcom&otype=json&ext_data=all&srcfrom=newsapp&callback=getNewsContentOnlyOutput> (referer: https://new.qq.com/omn/20200630/20200630A0IA8700.html)
+2020-06-30 20:17:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://openapi.inews.qq.com/getQQNewsNormalContent?id=20200630A0IA8700&refer=mobilewwwqqcom&otype=json&ext_data=all&srcfrom=newsapp&callback=getNewsContentOnlyOutput>
+{'content': '北京时间6月30日消息，巴萨最近3轮只赢下1场，与西甲冠军渐行渐远！而梅西本赛季的进球数字也在下滑，最近16场仅进10球，梅西创下近12年最差纪录。此外，梅西和巴萨助教萨拉维亚的矛盾公开化，名记骆明认为，梅西犯错了。自从塞蒂恩接手巴萨，梅西仅仅打进10球，并且是在踢了16场比赛的情况下，也就是说，梅西的进球效率已经下滑到了每场0.63球！梅西在塞蒂恩手下的数据，比自己20岁时在里杰卡尔德手下的最后一个赛季（07/08）还要差，那年，小将梅西仅收获了16粒进球。也就是说，梅西创下了12年最差纪录。本赛季，梅西截至目前只打进26球，这也是糟糕的数据，13/14赛季，梅西公认的低谷赛季，他也打进了41球！最近10个赛季，梅西单赛季进球数据没有低于40个，但本赛季，梅西只剩下6场西甲，欧冠还不确定，即便打进决赛，欧冠也只剩下4场，一共10场比赛，梅西想达到40球，每场需要进1.4球，以梅西现在的进球状态，几乎不可能！更何况，巴萨在欧冠中也很难走到决赛。塞蒂恩执教前，梅西本赛季20场16球，塞蒂恩到来后，梅西16场10球，进球效率下滑明显。当然，梅西进球状态，不一定是塞蒂恩的错。名记骆明认为，“上一场比赛的补水时间，梅西喝水，没有理会助理教练萨拉维亚，梅西不信任教练这些都可以理解，但直接背对助理教练嘴里还振振有词，这明显是梅西的错误。”骆明还列出了此前的事情，瓜迪奥拉时期，梅西得知自己没有首发，第二天没有参加训练。恩里克时期，梅西在更衣室差点和主教练大打出手，幸好哈维调停！在巴萨队内，一些球员紧紧围绕在梅西身边，变得如鱼得水，而没有和梅西打成一片的，在巴萨很艰难。最近一个受害者就是以1.25亿欧元引进的格列兹曼，格列兹曼身边的朋友对当地记者表示，“格列兹曼最近2次替补不是因为水平和成就，而是因为队内问题。”',
+ 'publish_time': '2020.06.30 15:52:31',
+ 'title': '梅西近16场仅进10球，创下12年最差纪录，与教练矛盾浮出水面！',
+ 'url': 'https://openapi.inews.qq.com/getQQNewsNormalContent?id=20200630A0IA8700&refer=mobilewwwqqcom&otype=json&ext_data=all&srcfrom=newsapp&callback=getNewsContentOnlyOutput'}
+2020-06-30 20:17:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://news.sina.com.cn/c/2020-06-30/doc-iirczymk9679379.shtml> (referer: https://news.sina.com.cn/)
+2020-06-30 20:17:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://news.sina.com.cn/c/2020-06-30/doc-iirczymk9679379.shtml>
+{'content': '原标题：尼泊尔外长：尼泊尔和中国没有边界争端媒体别再发假新闻海外网6月30日电近期，在印度媒体和尼泊尔反对派炒作所谓“中国侵占尼泊尔土地”的消息后，尼泊尔外交部于当地时间25日曾在其官网发布声明驳斥相关不实报道。当地时间29日，尼泊尔外交部长贾瓦利再次明确表示，尼泊尔和中国之间没有边界争端，并奉劝某些媒体不要散布影响两国关系的假新闻。据尼泊尔khabarhub等多家媒体报道，在29日尼泊尔国民议会的一场会议上，贾瓦利表示：“我想澄清一些关于尼中边界的误导性和虚假的新闻。（尼泊尔）农业和畜牧业部已经澄清了这一点，外交部也已经澄清，那就是尼泊尔和中国间的边界不存在争端。”贾瓦利还指出，尼泊尔政府正在研究着这些假新闻的来源，并奉劝媒体不要发布这类会影响中尼双边关系的不实报道。此外，尼泊尔共产党、国大党和社会党的几名议员也在会上建议采取行动，反对任何可能危及两国友谊的不当行为。此前，在某些媒体诬称“中国侵占尼泊尔村庄”后，尼泊尔外交部在其官网发布声明强调：“媒体对尼中边界和侵占尼领土的报道引起了尼泊尔外交部的关注。该新闻据称是基于农业和畜牧业部的‘报道’，但农业部已经反驳并澄清了这样的‘报道’并不存在，并且有关领土争议的事件也不属于农业部的管辖范围。”尼泊尔外交部在声明最后也提到，如有任何问题，尼泊尔政府将与两国有关部门相互协商解决。“尼泊尔外交部要求新闻媒介核实有关当局提供的信息，然后再就可能对这两个友好邻国之间的关系产生不利影响的敏感问题发表评论。”（海外网张霓）责任编辑：张迪',
+ 'publish_time': '2020.06.30 10:48:00',
+ 'title': '尼泊尔外长：和中国没有边界争端媒体别再发假新闻',
+ 'url': 'https://news.sina.com.cn/c/2020-06-30/doc-iirczymk9679379.shtml'}
+2020-06-30 20:17:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9832692149277140608%22%7D&n_type=1&p_from=4> (referer: http://baijiahao.baidu.com/s?id=1670914908167595360)
+2020-06-30 20:17:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9832692149277140608%22%7D&n_type=1&p_from=4>
+{'content': '吉利德科学公司6月29日宣布了抗新冠药物瑞德西韦的定价。自7月起，瑞德西韦将正式收费，拥有商业保险的美国患者每个疗程的治疗费用为3120美元。自今年5月起，瑞德西韦获得美国政府的紧急授权，吉利德公司宣布捐赠瑞德西韦。而这一“免费午餐”很快就要终结。根据最新定价，瑞德西韦在美国针对拥有商业保险的患者，每一剂定价520美元，每个疗程（5天6剂）的治疗费用为3120美元；在发达中国家每一剂定价390美元。吉利德科学公司表示：“390美元的价格远低于药物本身的价值。”吉利德科学公司CEO丹尼尔·奥戴（DanielO’Day）在公开信中表示：“我们确定的瑞德西韦的定价水平，加上政府计划的支持以及吉利德科学公司的协助，所有的患者都能用上这种药物。”瑞德西韦在美国一个疗程3120美元的定价低于此前临床与经济评论研究所（ICER）建议的5080美元的定价。上周，ICER刚刚把瑞德西韦的预测定价从原来的每个疗程4500美元上调至5080美元。目前瑞德西韦是全球唯一一个获得批准的抗新冠药物。不过，本月英国研究人员发表了地塞米松临床研究数据，显示该药物可能成为第二个有效的抗新冠药物。而地塞米松的价格要远低于瑞德西韦，这也影响了瑞德西韦的定价。尽管地塞米松正式的临床数据尚未发表，但根据ICER的预测，如果地塞米松获得批准，那么瑞德西韦的定价将会下调至每个疗程2520美元至2800美元。截至目前，吉利德科学已经与9家仿制药生产商签订了自愿授权协议。HeteroLabs和西普拉（Cipla）两家仿制药企业将分别以每100毫克剂量5000-6000卢比（约合65-78美元）和3000-4000卢比（约合39-42美元）的价格推出仿制药。目前全球新冠感染人数已经超过1000万，吉利德科学上周称，正在保障瑞德西韦的充足供应和可及性，预期将在今年年底前生产出超过200万个疗程的瑞德西韦，到2021年再生产数百万个疗程的药物。投行杰弗里（Jefferies）分析师迈克尔伊（MichaelYee）此前预计，以每个疗程1000美元至2000美元的价格来计算，200万疗程有望给吉利德公司带来20亿至30亿美元的销售。而根据最新的定价，瑞德西韦给吉利德公司带来的收入可能超过40亿美元。徐州医科大学附属医院感染及肝病科主任、疫情救治专家组组长颜学兵教授对第一财经记者表示：“现在国内治疗新冠使用的标准疗法奥司他韦的价格一个疗程约为300元人民币，瑞德西韦的定价要贵好几十倍！而且使用瑞德西韦的时间点非常讲究，最好是重症早期使用，而且其抗病毒疗效也并不肯定，只能缩短病程，效果与奥司他韦类似。而目前对降低病死率效果最明显的是地塞米松。”在目前新冠确诊感染病例反弹的背景下，医生也在寻求更加理性地用药。中日友好医院副院长曹彬教授对第一财经记者表示：“现在人们对于‘神药’的态度越来越理性，医生的救治经验增加了，虽然治疗效果不见得有新突破，但是乱用药的比例有所下降。”',
+ 'publish_time': '2020-06-29 21:00:00',
+ 'title': '瑞德西韦价格定了！每个疗程超3000美元',
+ 'url': 'https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9832692149277140608%22%7D&n_type=1&p_from=4'}
+2020-06-30 20:17:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://news.ifeng.com/c/7xjEJVAiXJA> (referer: http://news.ifeng.com/)
+2020-06-30 20:17:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9758348043604443041%22%7D&n_type=1&p_from=3> (referer: http://baijiahao.baidu.com/s?id=1670914908167595360)
