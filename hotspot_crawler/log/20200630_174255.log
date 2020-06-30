@@ -1,0 +1,18 @@
+2020-06-30 17:42:55 [scrapy.utils.log] INFO: Scrapy 2.1.0 started (bot: hotspot_crawler)
+2020-06-30 17:42:56 [scrapy.utils.log] INFO: Versions: lxml 4.5.1.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 | packaged by conda-forge | (default, Mar 23 2020, 22:22:21) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 2.8, Platform Windows-10-10.0.18362-SP0
+2020-06-30 17:42:56 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2020-06-30 17:42:56 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'hotspot_crawler',
+ 'CONCURRENT_REQUESTS': 32,
+ 'COOKIES_ENABLED': False,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': './hotspot_crawler/log/20200630_174255.log',
+ 'NEWSPIDER_MODULE': 'hotspot_crawler.spiders',
+ 'SPIDER_MODULES': ['hotspot_crawler.spiders.TencentHotspot',
+                    'hotspot_crawler.spiders.SohuHotspot',
+                    'hotspot_crawler.spiders.XinhuaHotspot',
+                    'hotspot_crawler.spiders.HuanqiuHotspot',
+                    'hotspot_crawler.spiders.BaiduHotspot',
+                    'hotspot_crawler.spiders.FengHuangHotspot',
+                    'hotspot_crawler.spiders.SinaHotspot']}

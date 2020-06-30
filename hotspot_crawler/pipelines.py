@@ -12,6 +12,8 @@ import traceback
 import pymysql
 from scrapy.exporters import JsonItemExporter
 
+from hotspot_crawler.spiders.dbmanager import MysqlOperation
+
 
 class JSONWithEncodingPipeline(object):
     def __init__(self):
@@ -36,28 +38,18 @@ class JSONWithEncodingPipeline(object):
         self.file = codecs.open(filename="./news_items/{}.json".format(int(today.timestamp())), mode="wb")
         self.exporter = JsonItemExporter(self.file, encoding="utf-8", ensure_ascii=False)
         self.exporter.start_exporting()
+        self.db = MysqlOperation()
 
     def process_item(self, item, spider):
         hashcode = hashlib.md5(item["url"].encode(encoding='UTF-8')).hexdigest()
-        self.insert_data(item["url"], hashcode, item["title"], item["publish_time"], item["content"])
+        self.db.insert_data(item["url"], hashcode, item["title"], item["publish_time"], item["content"])
         self.exporter.export_item(item)
         return item
 
     def close_spider(self, spider):
         self.exporter.finish_exporting()
         self.file.close()
-        self.connect.close()
-
-    def insert_data(self, url, hashcode, title, sql_datetime, content):
-        try:
-            insert_sql = "insert into text_storage values (null,'" + url + "','" + hashcode + "','" + title + "','" + sql_datetime + "','" + content + "');"
-            # 执行sql语句
-            self.cursor.execute(insert_sql)
-            # 4. 提交操作
-            self.connect.commit()
-        except:
-            # 输出异常信息
-            traceback.print_exc()
+        MysqlOperation.dis_connect()
 
 
 class ImageGettingPipeline(object):

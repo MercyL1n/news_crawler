@@ -60,44 +60,44 @@ class HuanqiuHotspotSpider(CrawlSpider):
             self.logger.critical(msg=e)
             return None
 
-    def get_hot_statistics(self, response):
-        import urllib, requests
-        url = 'https://commentn.huanqiu.com/api/v2/async?a=comment&m=source_info&appid={}&sourceid={}&url={}'
-        appid = 'e8fcff106c8f'
-        sourceid = response.css('meta[name="contentid"]::attr(content)').extract_first()
-        urlencoded = urllib.parse.quote(response.url)
-        if sourceid:
-            req = requests.get(url=url.format(appid, sourceid, urlencoded), headers={
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36",
-            })
-            # print(req.url)
-            content = req.json()
-            # print(content)
-            if content.get('code') == 22000:
-                base_data = content.get('data')
-                comment_num = base_data.get('n_comment') + base_data.get('d_comment')  # 把可能删掉的评论也算上
-                # 参与数 = 评论数 + 回复数 + 总数
-                participate_count = comment_num + base_data.get('n_reply') + base_data.get('d_reply') + base_data.get(
-                    'n_active') + base_data.get('d_active')
-                return {
-                    "comment_num": comment_num,
-                    "participate_count": participate_count
-                }
-            elif content.get('code') == 40400:
-                return {
-                    "comment_num": "该新闻未开放评论或无法获取",
-                    "participate_count": "该新闻未开放评论或无法获取"
-                }
-            else:
-                return {
-                    "comment_num": "返回值错误，获取失败",
-                    "participate_count": "返回值错误，获取失败"
-                }
-        else:
-            return {
-                "comment_num": "sourceid获取失败",
-                "participate_count": "sourceid获取失败"
-            }
+    # def get_hot_statistics(self, response):
+    #     import urllib, requests
+    #     url = 'https://commentn.huanqiu.com/api/v2/async?a=comment&m=source_info&appid={}&sourceid={}&url={}'
+    #     appid = 'e8fcff106c8f'
+    #     sourceid = response.css('meta[name="contentid"]::attr(content)').extract_first()
+    #     urlencoded = urllib.parse.quote(response.url)
+    #     if sourceid:
+    #         req = requests.get(url=url.format(appid, sourceid, urlencoded), headers={
+    #             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36",
+    #         })
+    #         # print(req.url)
+    #         content = req.json()
+    #         # print(content)
+    #         if content.get('code') == 22000:
+    #             base_data = content.get('data')
+    #             comment_num = base_data.get('n_comment') + base_data.get('d_comment')  # 把可能删掉的评论也算上
+    #             # 参与数 = 评论数 + 回复数 + 总数
+    #             participate_count = comment_num + base_data.get('n_reply') + base_data.get('d_reply') + base_data.get(
+    #                 'n_active') + base_data.get('d_active')
+    #             return {
+    #                 "comment_num": comment_num,
+    #                 "participate_count": participate_count
+    #             }
+    #         elif content.get('code') == 40400:
+    #             return {
+    #                 "comment_num": "该新闻未开放评论或无法获取",
+    #                 "participate_count": "该新闻未开放评论或无法获取"
+    #             }
+    #         else:
+    #             return {
+    #                 "comment_num": "返回值错误，获取失败",
+    #                 "participate_count": "返回值错误，获取失败"
+    #             }
+    #     else:
+    #         return {
+    #             "comment_num": "sourceid获取失败",
+    #             "participate_count": "sourceid获取失败"
+    #         }
 
     def remove_spaces_and_comments(self, repl_text):
         import re

@@ -66,7 +66,9 @@ class XinhuaHotspotSpider(CrawlSpider):
             item_loader.add_value("url", response.url)
             # item_loader.add_css("abstract", 'meta[name="description"]::attr(content)')
             content = response.css('#p-detail>p').extract() or response.css(
-                '#content>p::text, #content>p>span::text').extract()
+                '#content>p::text, #content>p>span::text').extract() or\
+                response.css('.main-aticle>p::text').extract()
+
             item_loader.add_value("content", self.deal_with_content(''.join(content)))
             # media_url = {}
             # img_urls = response.xpath('//*[@id="p-detail"]//img//@src').extract() or response.css(

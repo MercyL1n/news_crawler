@@ -32,3 +32,6 @@ class MysqlOperation():
         except:
             # 输出异常信息
             traceback.print_exc()
+
+    def dis_connect(self):
+        self.connect.close()
