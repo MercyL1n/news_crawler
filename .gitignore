@@ -1,3 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
-/news_items
+/news_items/
 /hotspot_crawler/log/
+/hotspot_crawler/__pycache__
+.idea
