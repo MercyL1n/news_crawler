@@ -1,8 +1,11 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*_
+# @Time : 2020/7/1 17:00
+# @Author : My
+# @Contact : lmy@bupt.edu.cn
+# @desc : 爬取新华网
 import copy
 import time
-import urllib
-
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
@@ -28,7 +31,6 @@ class XinhuaHotspotSpider(CrawlSpider):
     )
 
     def parse_items_xinhua(self, response):
-        # url示例：http://www.xinhuanet.com/fortune/2019-07/07/c_1210182505.htm
         print("parsing url %s" % response.url)
         global request_more
         if response.meta.get('item') is None:
@@ -42,25 +44,6 @@ class XinhuaHotspotSpider(CrawlSpider):
             import re
             if not item_loader.get_collected_values("title"):
                 item_loader.add_css("title", ".share-title::text")
-            # if not item_loader.get_collected_values("source_from"):
-            #     if response.css('#source'):
-            #         item_loader.add_css("source_from", '#source::text')
-            #     else:
-            #         source_from = response.css('.h-info > span:nth-child(2)::text').extract_first()
-            #         # 处理\r\n和空格
-            #         source_from = re.sub(r"\s+", "", source_from)
-            #         # 来源：xxx
-            #         item_loader.add_value("source_from", source_from.replace("来源：", ""))
-            # item_loader.add_value("source", "新华网")
-            # newsId = response.url.split('/')[-1].strip('.html')
-            # # 处理c_1124726204_2类的分页新闻
-            # newsId = re.findall(r"c_\d{9,}", newsId)[0]
-            # if not item_loader.get_collected_values("newsId") or item_loader.get_collected_values("newsId") != newsId:
-            #     item_loader.add_value("newsId", newsId)
-            # # keywords 示例：'中国经济,世界经济,依存度\r\n' -> ['中国经济','世界经济','依存度']
-            # keywords = list(
-            #     set(response.css('meta[name="keywords"]::attr(content)').extract_first().strip().split(','))) or []
-            # item_loader.add_value("keywords", keywords)
             publish_time = response.css('.h-time::text').extract_first()
             item_loader.add_value("publish_time", publish_time.replace("-", "."))
             item_loader.add_value("url", response.url)
@@ -70,18 +53,6 @@ class XinhuaHotspotSpider(CrawlSpider):
                 response.css('.main-aticle>p::text').extract()
 
             item_loader.add_value("content", self.deal_with_content(''.join(content)))
-            # media_url = {}
-            # img_urls = response.xpath('//*[@id="p-detail"]//img//@src').extract() or response.css(
-            #     '#content>p>img::attr(src)').extract()
-            # media_url.update({
-            #     "img_url": [urllib.parse.urljoin(response.url, i) for i in img_urls if not i.startswith('http')],
-            # })
-            # media_url.update({
-            #     "video_url": response.css('.pageVideo::attr(src)').extract() or [],
-            # })
-            # item_loader.add_value("media_url", media_url)
-            # hot_data = self.get_hot_statistics(response, newsId)
-            # item_loader.add_value("hot_data", hot_data)
             more_pages = response.css('#div_currpage>a::attr(href)').extract()
             if more_pages and not request_more:
                 # 先去重
@@ -97,37 +68,6 @@ class XinhuaHotspotSpider(CrawlSpider):
         except Exception as e:
             self.logger.critical(msg=e)
             return None
-
-    def get_hot_statistics(self, response, newsId):
-        import requests, string, random, re, json
-        url = 'http://comment.home.news.cn/a/newsInfo.do?newsId={}&callback=jQuery{}_{}&_={}'
-        newsId = newsId.strip('c_')
-        newsId = "1-" + newsId
-        ran_num = ''.join(random.sample(3 * string.digits, 21))
-        microsecond = int(time.time() * 1000)
-        req = requests.get(url=url.format(newsId, ran_num, microsecond, microsecond + 1), headers={
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36",
-        })
-        # print(req.url)
-        content = req.text.strip(';')
-        content = re.sub(r"jQuery\d+_\d+", repl="", string=content)
-        content = content.strip('()')
-        try:
-            datas = json.loads(content)
-        except:
-            datas = json.loads(content.replace(');', ''))
-        if not datas.get('code'):
-            comment_num = datas.get("commAmount")
-            participate_count = datas.get("downAmount") + datas.get("upAmount")
-            return {
-                "comment_num": comment_num,
-                "participate_count": participate_count
-            }
-        else:
-            return {
-                "comment_num": datas.get('code') + datas.get('description'),
-                "participate_count": datas.get('code') + datas.get('description')
-            }
 
     def deal_with_content(self, repl_text):
         from bs4 import BeautifulSoup

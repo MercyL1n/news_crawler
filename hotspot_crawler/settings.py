@@ -1,5 +1,9 @@
-# -*- coding: utf-8 -*-
-
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*_
+# @Time : 2020/7/1 17:00
+# @Author : My
+# @Contact : lmy@bupt.edu.cn
+# @desc :
 # Scrapy settings for hotspot_crawler project
 #
 # For simplicity, this file contains only settings considered important or

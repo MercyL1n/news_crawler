@@ -1,7 +1,10 @@
-# -*- coding: utf-8 -*-
-
+#!/usr/bin/env python
+# _*_ coding: utf-8 _*_
+# @Time : 2020/7/1 17:00
+# @Author : My
+# @Contact : lmy@bupt.edu.cn
+# @desc :
 # Define here the models for your spider middleware
-#
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
