@@ -42,7 +42,7 @@ class FengHuangHotspotSpider(CrawlSpider):
 
     def get_metadatas(self, response):
         """
-        通过meta获取页面内容
+        通过head>script下存取的变量获取内容
         :param response: 原始页面
         :return: 获取的标题，时间， 内容
         """
