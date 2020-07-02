@@ -8,7 +8,7 @@ import json
 import re
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
-
+from bs4 import BeautifulSoup
 from ..items import HotspotCrawlerItem, HotspotCrawlerItemLoader
 
 
@@ -85,6 +85,5 @@ class FengHuangHotspotSpider(CrawlSpider):
         return {}
 
     def deal_with_content(self, repl_text):
-        from bs4 import BeautifulSoup
         soup = BeautifulSoup(repl_text, "lxml")
         return '\n'.join(string for string in soup.stripped_strings) or ""

@@ -18,6 +18,7 @@ crawl_list = {
     'https://news.sina.com.cn/': 'SinaHotspot',
     'http://www.xinhuanet.com/': 'XinhuaHotspot',
     'http://news.baidu.com/': 'BaiduHotspot',
+    'huanqiu.com': 'HuanqiuHotspot'
 }
 
 if __name__ == '__main__':
@@ -33,9 +34,9 @@ if __name__ == '__main__':
     for website in website_list:
         if website[1] in crawl_list.keys():
             process.crawl(crawl_list[website[1]])
-            print(website[2]+"加入爬取列表")
+            print(str(website[2])+"加入爬取列表")
         else:
-            print("暂不支持"+website[2])
+            print("暂不支持"+str(website[2]))
     print("-----------------start-------------------")
     # 开始爬取
     process.start()
