@@ -18,7 +18,7 @@ crawl_list = {
     'https://news.sina.com.cn/': 'SinaHotspot',
     'http://www.xinhuanet.com/': 'XinhuaHotspot',
     'http://news.baidu.com/': 'BaiduHotspot',
-    'huanqiu.com': 'HuanqiuHotspot'
+    'http://huanqiu.com': 'HuanqiuHotspot'
 }
 
 # if __name__ == '__main__':
@@ -41,4 +41,4 @@ crawl_list = {
 #     print("-----------------start-------------------")
 #     # 开始爬取
 #     process.start()
-cmdline.execute("scrapy crawl FengHuangHotspot".split())
+cmdline.execute("scrapy crawl HuanqiuHotspot".split())

@@ -28,7 +28,8 @@ class JSONWithEncodingPipeline(object):
         # 生成hashcode作为标识
         hashcode = hashlib.md5(item["url"].encode(encoding='UTF-8')).hexdigest()
         # 向数据库插入爬取的数据
-        self.db.insert_data(item["url"], hashcode, item["title"], item["publish_time"], item["content"])
+        if item["content"]:
+            self.db.insert_data(item["url"], hashcode, item["title"], item["publish_time"], item["content"])
         # self.exporter.export_item(item)
         return item
 

@@ -30,7 +30,10 @@ class SohuHotspotSpider(CrawlSpider):
             title = re.sub(r"_\S+", "", title)
             item_loader.add_value("title", title)
             publish_time = response.css('meta[itemprop="datePublished"]::attr(content)').extract_first()
-            item_loader.add_value("publish_time", publish_time.replace("-", ".")+":00")
+            if len(publish_time) < 19:
+                publish_time = publish_time + ":00"
+            item_loader.add_value("publish_time", publish_time.replace("-", "."))
+
             cnt_list = response.css('article>p::text').extract()
             content = '\n'.join(i.strip() for i in cnt_list)
             content = self.remove_spaces_and_comments(content.strip("责任编辑："))

@@ -6,6 +6,7 @@
 # @desc : 数据库管理类
 import traceback
 import pymysql
+from pymysql import escape_string
 
 
 class MysqlOperation:
@@ -30,14 +31,18 @@ class MysqlOperation:
 
     def insert_data(self, url, hashcode, title, sql_datetime, content):
         try:
-            insert_sql = "insert into text_storage values (null,'" + url + "','" + hashcode + "','" + title + "','" + sql_datetime + "','" + content + "');"
+            insert_sql = "insert into text_storage values (null,'" + url + "','" + hashcode + "','" + \
+                         escape_string(title) + "','" + sql_datetime + "','" + escape_string(content) + "');"
             # 执行sql语句
             self.cursor.execute(insert_sql)
             # 4. 提交操作
             self.connect.commit()
-        except:
+        except Exception as e:
             # 输出异常信息
-            traceback.print_exc()
+            # 忽略重复插入错误
+            if e.args[0] != 1062:
+                print(e)
+            self.connect.rollback()
 
     def get_website_list(self):
         try:
